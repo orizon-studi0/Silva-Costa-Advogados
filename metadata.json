@@ -1,0 +1,7 @@
+{
+  "name": "Silva & Costa Advogados",
+  "description": "Landing page de demonstração institucional e elegante para o escritório Silva & Costa Advogados em Campinas - SP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
