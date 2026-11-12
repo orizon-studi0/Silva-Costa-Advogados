@@ -22,11 +22,18 @@
       content="Escritório de advocacia em Campinas - SP com atuação técnica e ética nas principais áreas do Direito."
     />
 
-    <!-- Google Fonts -->
+    <!-- Favicon com Iniciais SC -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233b1e2a'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='15' font-weight='700' fill='%23b08d57'%3ESC%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Google Fonts: Cormorant Garamond (títulos) e Source Sans 3 (corpo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -87,17 +94,16 @@
         --cor-primaria: #3b1e2a;
         --cor-primaria-clara: #5a2e40;
         --cor-bronze: #b08d57;
-        --cor-texto: #231a1e;
-        --cor-texto-suave: #6b5f63;
+        --cor-texto: #1f181b;
+        --cor-texto-suave: #574b50;
 
-        /* Suportes harmônicos de bordas, sombras e opacidade baseadas na paleta */
-        --cor-borda-sutil: rgba(176, 141, 87, 0.28);
-        --cor-borda-card: rgba(59, 30, 42, 0.1);
+        /* Suportes sólidos de bordas e cartões */
+        --cor-borda-sutil: rgba(176, 141, 87, 0.32);
+        --cor-borda-card: rgba(59, 30, 42, 0.12);
         --cor-bronze-tint: rgba(176, 141, 87, 0.12);
-        --cor-bronze-glow: rgba(176, 141, 87, 0.25);
         --card-bg: #ffffff;
-        --font-serif: 'Playfair Display', Georgia, serif;
-        --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       }
 
       * {
@@ -118,9 +124,24 @@
         min-height: 100svh;
         display: flex;
         flex-direction: column;
-        line-height: 1.6;
+        line-height: 1.65;
         overflow-x: hidden;
       }
+
+      /* Linhas de texto com no máximo 70 caracteres para leitura confortável */
+      p,
+      .card-desc,
+      .hero-subtitle,
+      .section-subtitle {
+        max-width: 68ch;
+      }
+
+      /* Foco visível e acessível para navegação por teclado */
+      :focus-visible {
+        outline: 2px solid var(--cor-bronze);
+        outline-offset: 3px;
+      }
+
       /* Regras Globais contra Textos Cortados ou Estouro (Parte 2) */
       h1, h2, h3, h4, h5, h6,
       p, span, a, button,
@@ -155,30 +176,13 @@
         max-width: 100%;
       }
 
-
       main {
         overflow-x: hidden;
       }
 
-      /* Barra de Progresso Fina no Topo */
+      /* Barra de progresso desativada para estética limpa e profissional */
       .scroll-progress-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: var(--cor-bronze);
-        z-index: 100;
-        transform-origin: left center;
-        transform: scaleX(0);
-        pointer-events: none;
-        transition: transform 0.08s linear;
-      }
-
-      @media (min-width: 769px) {
-        .scroll-progress-bar {
-          display: none;
-        }
+        display: none !important;
       }
 
       /* Typography Utilities */
@@ -206,14 +210,15 @@
         }
       }
 
-      /* Image Containers with Fixed Aspect Ratio & Refined Fallbacks */
+      /* Image Containers with Fixed Aspect Ratio & Solid Fallbacks */
       .img-aspect-hero {
         position: relative;
         width: 100%;
         aspect-ratio: 16 / 9;
         overflow: hidden;
-        border-radius: 12px;
-        background: linear-gradient(135deg, rgba(239, 232, 219, 0.85) 0%, rgba(176, 141, 87, 0.25) 100%);
+        border-radius: 6px;
+        background: var(--cor-marfim);
+        border: 1px solid var(--cor-borda-sutil);
       }
 
       .img-aspect-card {
@@ -221,11 +226,12 @@
         width: 100%;
         aspect-ratio: 4 / 3;
         overflow: hidden;
-        border-radius: 12px;
-        background: linear-gradient(135deg, rgba(239, 232, 219, 0.85) 0%, rgba(176, 141, 87, 0.25) 100%);
+        border-radius: 6px;
+        background: var(--cor-marfim);
+        border: 1px solid var(--cor-borda-sutil);
       }
 
-      /* Bloco de reserva elegante caso imagem falhe ou demore */
+      /* Bloco de reserva sóbrio e elegante caso imagem demore ou falhe */
       .img-fallback {
         position: absolute;
         inset: 0;
@@ -236,7 +242,7 @@
         gap: 0.5rem;
         z-index: 1;
         pointer-events: none;
-        background: linear-gradient(135deg, rgba(239, 232, 219, 0.92) 0%, rgba(176, 141, 87, 0.35) 100%);
+        background: var(--cor-marfim);
         color: var(--cor-primaria);
         padding: 1.25rem;
         text-align: center;
@@ -250,10 +256,9 @@
 
       .img-fallback-label {
         font-family: var(--font-serif);
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        letter-spacing: 0.05em;
         color: var(--cor-primaria);
       }
 
@@ -265,7 +270,7 @@
         object-fit: cover;
         display: block;
         opacity: 0;
-        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: opacity 0.4s ease;
       }
 
       .img-cover.img-loaded {
@@ -277,16 +282,12 @@
         opacity: 0 !important;
       }
 
-      .img-wrapper-hover:hover .img-cover {
-        transform: scale(1.03);
-      }
-
       /* Top Demonstration Banner */
       .top-demo-bar {
-        background-color: rgba(35, 15, 24, 0.7);
+        background-color: var(--cor-primaria);
         color: var(--cor-marfim);
         font-size: 0.75rem;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.03em;
         border-bottom: 1px solid var(--cor-borda-sutil);
         padding: 0.5rem 1rem;
         text-align: center;
@@ -304,8 +305,7 @@
         gap: 0.35rem;
         color: var(--cor-bronze);
         font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
       }
 
       /* Fixed Navigation Header */
@@ -316,17 +316,15 @@
         right: 0;
         z-index: 50;
         background: transparent;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: none;
-        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
       }
 
       .site-header.is-scrolled {
-        background: rgba(59, 30, 42, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom-color: var(--cor-borda-sutil);
-        box-shadow: 0 4px 20px rgba(35, 26, 30, 0.35);
+        background: var(--cor-primaria);
+        border-bottom: 1px solid var(--cor-borda-sutil);
+        box-shadow: 0 2px 8px rgba(35, 26, 30, 0.15);
       }
 
       .nav-container {
@@ -347,16 +345,15 @@
         width: 2.75rem;
         height: 2.75rem;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--cor-bronze) 0%, #8e6e3d 100%);
+        background: var(--cor-primaria);
+        border: 1px solid var(--cor-bronze);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff;
+        color: var(--cor-marfim);
         font-family: var(--font-serif);
         font-weight: 700;
         font-size: 1.15rem;
-        box-shadow: 0 0 15px var(--cor-bronze-glow);
-        border: 1px solid rgba(255, 255, 255, 0.3);
       }
 
       .brand-text {
@@ -366,19 +363,19 @@
 
       .brand-name {
         font-family: var(--font-serif);
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.35rem;
+        font-weight: 600;
         color: var(--cor-marfim);
-        letter-spacing: 0.02em;
+        letter-spacing: 0.01em;
         line-height: 1.15;
       }
 
       .brand-tagline {
-        font-size: 0.68rem;
+        font-size: 0.7rem;
         text-transform: uppercase;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.14em;
         color: var(--cor-bronze);
-        font-weight: 600;
+        font-weight: 500;
       }
 
       .nav-desktop {
@@ -435,7 +432,7 @@
 
       @media (max-width: 480px) {
         .brand-name {
-          font-size: 1.05rem;
+          font-size: 1.1rem;
         }
         .brand-logo-icon {
           width: 2.25rem;
@@ -474,11 +471,16 @@
         width: 0%;
         height: 2px;
         background-color: var(--cor-bronze);
-        transition: width 0.25s ease;
+        transition: width 0.2s ease;
       }
 
-      .nav-link:hover::after {
+      .nav-link:hover::after,
+      .nav-link.is-active::after {
         width: 100%;
+      }
+
+      .nav-link.is-active {
+        color: var(--cor-bronze);
       }
 
       /* Buttons & CTAs */
@@ -493,7 +495,7 @@
         border-radius: 4px;
         text-decoration: none;
         cursor: pointer;
-        transition: all 0.25s ease;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
         line-height: 1.25;
         white-space: normal;
         text-align: center;
@@ -506,7 +508,6 @@
         background-color: var(--cor-primaria);
         color: #ffffff;
         border: 1px solid var(--cor-primaria);
-        box-shadow: 0 4px 14px rgba(59, 30, 42, 0.2);
       }
 
       .btn-primary:hover,
@@ -514,8 +515,6 @@
         background-color: var(--cor-primaria-clara);
         border-color: var(--cor-primaria-clara);
         color: #ffffff;
-        transform: translateY(-1px);
-        box-shadow: 0 6px 20px rgba(59, 30, 42, 0.3);
       }
 
       .btn-bronze-outline {
@@ -544,6 +543,7 @@
       .btn-sm {
         padding: 0.5rem 1rem;
         font-size: 0.8125rem;
+        min-height: 44px;
       }
 
       /* Mobile Navigation Menu */
@@ -572,23 +572,21 @@
         left: 0;
         right: 0;
         max-height: calc(100svh - 80px);
-        background: rgba(59, 30, 42, 0.98);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        background: var(--cor-primaria);
         display: flex;
         flex-direction: column;
         padding: 1.5rem 1.5rem 2.5rem 1.5rem;
         overflow-y: auto;
         z-index: 45;
         border-top: 1px solid var(--cor-borda-sutil);
-        box-shadow: 0 20px 40px rgba(35, 26, 30, 0.5);
+        box-shadow: 0 10px 25px rgba(35, 26, 30, 0.4);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transform: translateY(-8px);
-        transition: opacity var(--m-transicao) cubic-bezier(0.16, 1, 0.3, 1),
-                    transform var(--m-transicao) cubic-bezier(0.16, 1, 0.3, 1),
-                    visibility 0.3s;
+        transform: translateY(-4px);
+        transition: opacity var(--m-transicao) ease,
+                    transform var(--m-transicao) ease,
+                    visibility 0.25s;
       }
 
       .mobile-menu-drawer.active {
@@ -610,34 +608,23 @@
         align-items: center;
       }
 
-      .mobile-menu-link:hover {
+      .mobile-menu-link:hover,
+      .mobile-menu-link.is-active {
         color: var(--cor-bronze);
       }
 
-      /* Section Title & Badges */
+      /* Rótulos pequenos em caixa alta removidos conforme instrução de descaracterização de IA */
       .section-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.35rem 0.85rem;
-        background: var(--cor-bronze-tint);
-        border: 1px solid var(--cor-borda-sutil);
-        border-radius: 9999px;
-        color: var(--cor-bronze);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        margin-bottom: 0.75rem;
+        display: none !important;
       }
 
       .section-title {
         font-family: var(--font-serif);
-        font-size: clamp(1.85rem, 4vw, 2.75rem);
+        font-size: clamp(2rem, 4vw, 2.85rem);
         color: var(--cor-primaria);
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -0.01em;
+        font-weight: 600;
+        line-height: 1.15;
+        letter-spacing: -0.015em;
         margin-bottom: 1rem;
       }
 
@@ -683,25 +670,20 @@
         padding-right: 1.5rem;
       }
 
-      /* Camada escura para legibilidade com gradiente somado ao tom primário */
+      /* Camada escura sólida com tom da cor primária para legibilidade imediata */
       .hero::after {
         content: "";
         position: absolute;
         inset: 0;
         z-index: 1;
         pointer-events: none;
-        background: linear-gradient(
-          135deg,
-          rgba(59, 30, 42, 0.45) 0%,
-          rgba(0, 0, 0, var(--hero-escurecer)) 45%,
-          rgba(0, 0, 0, calc(var(--hero-escurecer) - 0.2)) 100%
-        );
+        background: rgba(28, 14, 20, var(--hero-escurecer));
       }
 
       /* Reserva / Fallback se a imagem falhar */
       .hero.hero-fallback,
       .hero.hero-fallback::after {
-        background: linear-gradient(135deg, var(--cor-primaria) 0%, #29121c 50%, var(--cor-bronze) 100%) !important;
+        background: var(--cor-primaria) !important;
       }
 
       .hero-bg-img {
@@ -743,47 +725,35 @@
       }
 
       .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.35rem 0.85rem;
-        background: rgba(176, 141, 87, 0.25);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid rgba(176, 141, 87, 0.45);
-        border-radius: 9999px;
-        color: #f7f3ec;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        margin-bottom: 1.25rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        display: none !important;
       }
 
       .hero-title {
         font-family: var(--font-serif);
-        font-size: clamp(2rem, 6vw, 3.6rem);
+        font-size: clamp(2.2rem, 5.5vw, 3.8rem);
         line-height: 1.15;
         color: #ffffff;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
         margin-bottom: 1.25rem;
         max-width: 900px;
+        font-weight: 600;
       }
 
+      /* O título inteiro mantém o mesmo estilo e cor, sem destaque isolado de IA */
       .hero-title span {
-        color: var(--cor-bronze);
-        font-style: italic;
+        color: inherit;
+        font-style: inherit;
+        font-weight: inherit;
       }
 
       .hero-subtitle {
         font-family: var(--font-sans);
-        font-size: clamp(1rem, 2.6vw, 1.25rem);
-        line-height: 1.6;
+        font-size: clamp(1rem, 2.4vw, 1.25rem);
+        line-height: 1.65;
         color: #ffffff;
-        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
         margin-bottom: 2rem;
-        max-width: 720px;
+        max-width: 68ch;
         opacity: 0.95;
       }
 
@@ -799,7 +769,6 @@
         background-color: var(--cor-primaria);
         color: #ffffff;
         border: 1px solid var(--cor-bronze);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
       }
 
       .btn-hero-primary:hover,
@@ -807,15 +776,12 @@
         background-color: var(--cor-primaria-clara);
         border-color: #ffffff;
         color: #ffffff;
-        transform: translateY(-1px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
       }
 
       .btn-hero-secondary {
         background: transparent;
         color: #ffffff;
         border: 1px solid rgba(255, 255, 255, 0.85);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       }
 
       .btn-hero-secondary:hover,
@@ -823,7 +789,6 @@
         background: rgba(255, 255, 255, 0.15);
         border-color: #ffffff;
         color: #ffffff;
-        transform: translateY(-1px);
       }
 
       .hero-trust-bar {
@@ -838,23 +803,21 @@
 
       .hero-trust-bar .trust-item-title {
         font-family: var(--font-serif);
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.35rem;
+        font-weight: 600;
         color: var(--cor-bronze);
         line-height: 1.1;
         margin-bottom: 0.25rem;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
       }
 
       .hero-trust-bar .trust-item-label {
-        font-size: 0.75rem;
+        font-size: 0.8125rem;
         color: #ffffff;
         opacity: 0.92;
         line-height: 1.35;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
       }
 
-      /* Entrada Sequencial (Fade e Slide de 16px com atraso de 120ms) */
+      /* Entrada do Hero mantida suave */
       @keyframes heroFadeSlide {
         0% {
           opacity: 0;
@@ -890,49 +853,47 @@
         animation: heroFadeSlide 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards;
       }
 
-      /* Cards: Cards brancos com borda sutil e cantos de 12px, bastante espaço */
+      /* Cards: Sombra única e sutil, cantos de 8px e sem efeito artificial de elevação */
       .card {
         background: #ffffff;
-        border: 1px solid var(--cor-borda-sutil);
-        border-radius: 12px;
-        padding: 2.25rem 2rem;
-        transition: all 0.3s ease;
+        border: 1px solid var(--cor-borda-card);
+        border-radius: 8px;
+        padding: 2rem 1.75rem;
+        transition: border-color 0.2s ease;
         position: relative;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 15px rgba(59, 30, 42, 0.03);
+        box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);
       }
 
       .card:hover {
         border-color: var(--cor-bronze);
-        box-shadow: 0 12px 30px rgba(59, 30, 42, 0.08);
-        transform: translateY(-3px);
       }
 
       .card-icon-box {
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 10px;
-        background: rgba(176, 141, 87, 0.1);
-        color: var(--cor-bronze);
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 6px;
+        background: var(--cor-marfim);
+        color: var(--cor-primaria);
         border: 1px solid var(--cor-borda-sutil);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 1.5rem;
-        transition: all 0.3s ease;
+        margin-bottom: 1.25rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
 
       .card:hover .card-icon-box {
         background: var(--cor-primaria);
-        color: var(--cor-marfim);
-        border-color: var(--cor-bronze);
+        color: #ffffff;
+        border-color: var(--cor-primaria);
       }
 
       .card-title {
         font-family: var(--font-serif);
         font-size: 1.35rem;
-        font-weight: 700;
+        font-weight: 600;
         color: var(--cor-primaria);
         margin-bottom: 0.75rem;
       }
@@ -943,61 +904,58 @@
         line-height: 1.6;
         margin-bottom: 1.5rem;
         flex-grow: 1;
+        max-width: 68ch;
       }
 
-      /* Team Monogram Circle */
+      /* Monograma de Advogados */
       .monogram-avatar {
-        width: 5rem;
-        height: 5rem;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-clara) 100%);
-        border: 2px solid var(--cor-bronze);
-        box-shadow: 0 0 20px var(--cor-bronze-glow);
+        background: var(--cor-primaria);
+        border: 1px solid var(--cor-bronze);
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--cor-marfim);
         font-family: var(--font-serif);
-        font-size: 1.65rem;
+        font-size: 1.45rem;
         font-weight: 700;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
       }
 
       /* Process Step Cards */
       .step-card {
         position: relative;
-        padding: 2.25rem 2rem;
+        padding: 2rem 1.75rem;
         background: #ffffff;
-        border: 1px solid var(--cor-borda-sutil);
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(59, 30, 42, 0.03);
+        border: 1px solid var(--cor-borda-card);
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);
       }
 
       .step-number {
         font-family: var(--font-serif);
-        font-size: 2.25rem;
-        font-weight: 700;
+        font-size: 1.75rem;
+        font-weight: 600;
         color: var(--cor-bronze);
         line-height: 1;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: baseline;
-        gap: 0.25rem;
+        margin-bottom: 0.75rem;
       }
 
       /* FAQ Accordion */
       .faq-item {
         background: #ffffff;
-        border: 1px solid var(--cor-borda-sutil);
-        border-radius: 12px;
-        margin-bottom: 1rem;
+        border: 1px solid var(--cor-borda-card);
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
         overflow: hidden;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: border-color 0.2s ease;
+        box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);
       }
 
       .faq-item.active {
         border-color: var(--cor-bronze);
-        box-shadow: 0 6px 20px rgba(59, 30, 42, 0.06);
       }
 
       .faq-trigger {
@@ -1009,7 +967,7 @@
         background: none;
         border: none;
         font-family: var(--font-serif);
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         font-weight: 600;
         color: var(--cor-primaria);
         text-align: left;
@@ -1025,7 +983,7 @@
         width: 1.25rem;
         height: 1.25rem;
         color: var(--cor-bronze);
-        transition: transform 0.3s ease;
+        transition: transform 0.25s ease;
         flex-shrink: 0;
         margin-left: 1rem;
       }
@@ -1037,7 +995,7 @@
       .faq-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: max-height 0.3s ease;
         padding: 0 1.5rem;
       }
 
@@ -1048,6 +1006,7 @@
         line-height: 1.65;
         border-top: 1px solid var(--cor-marfim);
         padding-top: 1rem;
+        max-width: 68ch;
       }
 
       /* Floating WhatsApp Button */
@@ -1502,24 +1461,18 @@
           border-radius: 4px;
         }
 
-        /* 3) Animações e fluidez no celular */
+        /* Animações artificiais de seção removidas para renderização estática e fluida */
         .m-reveal {
-          opacity: 0;
-          transform: translateY(16px);
-          transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .m-reveal.m-revealed {
-          opacity: 1;
-          transform: translateY(0);
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
         }
 
         /* Efeito de toque nos botões */
         .btn:active,
         button:active,
         .mobile-menu-link:active {
-          transform: scale(0.97) !important;
+          transform: scale(0.98) !important;
         }
 
         /* Pulso discreto no botão de WhatsApp a cada 6 segundos */
@@ -1575,11 +1528,6 @@
     </style>
   </head>
   <body>
-    <!-- Barra de Progresso Fina no Topo -->
-    <div id="scrollProgress" class="scroll-progress-bar" aria-hidden="true"></div>
-
-    
-
     <!-- Fixed Header -->
     <header class="site-header" id="siteHeader">
     <!-- Top Demonstration Badge -->
@@ -1603,7 +1551,7 @@
         Modelo de demonstração Orizon Studio
       </span>
       <span class="hidden sm:inline" style="color: var(--cor-bronze);">|</span>
-      <span class="hidden sm:inline" style="color: var(--cor-marfim);">Centro, Campinas - SP &bull; Seg a Sex das 09h às 18h</span>
+      <span class="hidden sm:inline" style="color: var(--cor-marfim);">Centro, Campinas - SP, Segunda a Sexta das 9h às 18h</span>
     </aside>
       <div class="container nav-container">
         <a href="#inicio" class="brand-link" aria-label="Silva e Costa Advogados - Página inicial">
@@ -1706,14 +1654,14 @@
 
       <!-- Mobile Dropdown Drawer -->
       <div id="mobileMenuDrawer" class="mobile-menu-drawer" aria-label="Menu móvel">
-        <a href="#sobre" class="mobile-menu-link">Sobre o Escritório &rarr;</a>
-        <a href="#atuacao" class="mobile-menu-link">Áreas de Atuação &rarr;</a>
-        <a href="#equipe" class="mobile-menu-link">Nossa Equipe &rarr;</a>
-        <a href="#atendimento" class="mobile-menu-link">Como Funciona o Atendimento &rarr;</a>
-        <a href="#orientacoes" class="mobile-menu-link">Orientações Gerais &rarr;</a>
-        <a href="#faq" class="mobile-menu-link">Perguntas Frequentes &rarr;</a>
-        <a href="#ambiente" class="mobile-menu-link">Nosso Ambiente &rarr;</a>
-        <a href="#contato" class="mobile-menu-link">Contato e Localização &rarr;</a>
+        <a href="#sobre" class="mobile-menu-link">Sobre o Escritório</a>
+        <a href="#atuacao" class="mobile-menu-link">Áreas de Atuação</a>
+        <a href="#equipe" class="mobile-menu-link">Nossa Equipe</a>
+        <a href="#atendimento" class="mobile-menu-link">Como Funciona o Atendimento</a>
+        <a href="#orientacoes" class="mobile-menu-link">Orientações Gerais</a>
+        <a href="#faq" class="mobile-menu-link">Perguntas Frequentes</a>
+        <a href="#ambiente" class="mobile-menu-link">Nosso Ambiente</a>
+        <a href="#contato" class="mobile-menu-link">Contato e Localização</a>
         <div style="margin-top: 1.5rem;">
           <a
             href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20entrar%20em%20contato."
@@ -1744,11 +1692,8 @@
 
         <!-- Conteúdo do Hero (Centralizado na vertical, alinhado à esquerda no desktop e centro no celular) -->
         <div class="hero-content">
-          <div class="hero-badge hero-anim-1">
-            Assessoria Jurídica Estratégica &bull; Campinas - SP
-          </div>
           <h1 class="hero-title hero-anim-2">
-            Prática jurídica técnica, ética e dedicada à <span>segurança dos seus direitos</span>.
+            Prática jurídica técnica, ética e dedicada à segurança dos seus direitos.
           </h1>
           <p class="hero-subtitle hero-anim-3">
             Atuação consultiva e contenciosa especializada para pessoas físicas e empresas. Atendimento transparente, fundamentado no rigor da lei e no respeito a cada caso.
@@ -1804,7 +1749,6 @@
         <div class="container">
           <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center;" class="lg:grid-cols-2">
             <div>
-              <div class="section-badge">Institucional</div>
               <h2 class="section-title">
                 Tradição técnica, escuta atenta e respeito irrestrito ao cliente
               </h2>
@@ -1818,7 +1762,7 @@
                 </p>
                 <p style="color: var(--cor-texto-suave); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
                   Nossa atuação é estritamente pautada na ética profissional, na clareza das orientações e na
-                  busca por soluções sólidas — tanto preventivas quanto contenciosas —, priorizando sempre a
+                  busca por soluções sólidas, tanto preventivas quanto contenciosas, priorizando sempre a
                   segurança jurídica e o esclarecimento honesto de riscos e possibilidades.
                 </p>
               </div>
@@ -1874,14 +1818,14 @@
             </div>
 
             <!-- Box Institucional -->
-            <div style="background: var(--cor-primaria); border-radius: 12px; padding: 2rem; color: var(--cor-marfim); border: 1px solid var(--cor-borda-sutil); box-shadow: 0 15px 35px rgba(59, 30, 42, 0.12);">
+            <div style="background: var(--cor-primaria); border-radius: 8px; padding: 2rem; color: var(--cor-marfim); border: 1px solid var(--cor-borda-sutil); box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);">
               <h3 class="font-serif" style="font-size: 1.35rem; color: var(--cor-marfim); margin-bottom: 1.25rem; border-bottom: 1px solid var(--cor-borda-sutil); padding-bottom: 0.65rem;">
                 Compromissos Institucionais
               </h3>
               <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                 <div>
                   <h4 style="font-size: 1rem; font-weight: 600; color: var(--cor-bronze); margin-bottom: 0.25rem;">
-                    1. Rigor Técnico e Atualização
+                    Rigor Técnico e Atualização
                   </h4>
                   <p style="font-size: 0.85rem; color: var(--cor-marfim); opacity: 0.9; line-height: 1.5;">
                     Acompanhamento contínuo da jurisprudência dos tribunais superiores (STF, STJ, TST) e das súmulas vigentes.
@@ -1889,7 +1833,7 @@
                 </div>
                 <div>
                   <h4 style="font-size: 1rem; font-weight: 600; color: var(--cor-bronze); margin-bottom: 0.25rem;">
-                    2. Respeito ao Código de Ética da OAB
+                    Respeito ao Código de Ética da OAB
                   </h4>
                   <p style="font-size: 0.85rem; color: var(--cor-marfim); opacity: 0.9; line-height: 1.5;">
                     Prática informativa, sem promessas ilusórias de êxito e com total fidelidade aos preceitos da advocacia brasileira.
@@ -1897,7 +1841,7 @@
                 </div>
                 <div>
                   <h4 style="font-size: 1rem; font-weight: 600; color: var(--cor-bronze); margin-bottom: 0.25rem;">
-                    3. Acolhimento Humano e Acessível
+                    Acolhimento Humano e Acessível
                   </h4>
                   <p style="font-size: 0.85rem; color: var(--cor-marfim); opacity: 0.9; line-height: 1.5;">
                     Atendimento atencioso desde o primeiro contato, esclarecendo dúvidas com didática e serenidade.
@@ -1913,10 +1857,9 @@
       <section id="atuacao" class="section-padding m-reveal" style="background-color: var(--cor-marfim);" aria-label="Áreas de atuação jurídica">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Especialidades</div>
             <h2 class="section-title">Áreas de Atuação Especializada</h2>
             <p class="section-subtitle">
-              Soluções jurídicas estruturadas com fundamentação técnica em 5 ramos fundamentais do Direito.
+              Assessoria jurídica consultiva e contenciosa em 5 ramos fundamentais do Direito.
             </p>
           </div>
 
@@ -1936,9 +1879,9 @@
                   Assessoria em relações individuais e coletivas de trabalho. Análise de contratos, rescisões, horas extras, adicionais, estabilidades e compliance preventivo para redução de passivos.
                 </p>
                 <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--cor-texto-suave); display: flex; flex-direction: column; gap: 0.4rem;">
-                  <li>&bull; Rescisões contratuais e verbas devidas</li>
-                  <li>&bull; Reclamatórias e defesas técnicas</li>
-                  <li>&bull; Consultoria preventiva corporativa</li>
+                  <li>Rescisões contratuais e verbas devidas</li>
+                  <li>Reclamatórias e defesas técnicas</li>
+                  <li>Consultoria preventiva corporativa</li>
                 </ul>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20orientações%20sobre%20Direito%20Trabalhista."
@@ -1946,7 +1889,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Consultar sobre Trabalhista &rarr;
+                  Consultar sobre Trabalhista
                 </a>
               </div>
 
@@ -1965,9 +1908,9 @@
                   Condução cuidadosa e equilibrada de inventários judiciais e extrajudiciais, planejamento sucessório, divórcios consensuais e litigiosos, fixação de pensão alimentícia e guarda.
                 </p>
                 <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--cor-texto-suave); display: flex; flex-direction: column; gap: 0.4rem;">
-                  <li>&bull; Inventários e partilhas de bens</li>
-                  <li>&bull; Planejamento sucessório familiar</li>
-                  <li>&bull; Divórcios e união estável</li>
+                  <li>Inventários e partilhas de bens</li>
+                  <li>Planejamento sucessório familiar</li>
+                  <li>Divórcios e união estável</li>
                 </ul>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20orientações%20sobre%20Direito%20de%20Família%20e%20Sucessões."
@@ -1975,7 +1918,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Consultar sobre Família &rarr;
+                  Consultar sobre Família
                 </a>
               </div>
 
@@ -1992,9 +1935,9 @@
                   Planejamento minucioso junto ao INSS. Simulação e contagem de tempo de contribuição, aposentadorias por tempo, idade e especiais, auxílios e revisões administrativas ou judiciais.
                 </p>
                 <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--cor-texto-suave); display: flex; flex-direction: column; gap: 0.4rem;">
-                  <li>&bull; Planejamento previdenciário completo</li>
-                  <li>&bull; Aposentadorias e pensões por morte</li>
-                  <li>&bull; Recursos administrativos e judiciais</li>
+                  <li>Planejamento previdenciário completo</li>
+                  <li>Aposentadorias e pensões por morte</li>
+                  <li>Recursos administrativos e judiciais</li>
                 </ul>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20orientações%20sobre%20Direito%20Previdenciário."
@@ -2002,7 +1945,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Consultar sobre Previdenciário &rarr;
+                  Consultar sobre Previdenciário
                 </a>
               </div>
 
@@ -2021,9 +1964,9 @@
                   Redação e revisão de instrumentos contratuais, reparações civis, disputas imobiliárias, cobranças de títulos e resolução de conflitos patrimoniais com rigor técnico.
                 </p>
                 <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--cor-texto-suave); display: flex; flex-direction: column; gap: 0.4rem;">
-                  <li>&bull; Elaboração e auditoria de contratos</li>
-                  <li>&bull; Ações indenizatórias e cobranças</li>
-                  <li>&bull; Questões imobiliárias e possessórias</li>
+                  <li>Elaboração e auditoria de contratos</li>
+                  <li>Ações indenizatórias e cobranças</li>
+                  <li>Questões imobiliárias e possessórias</li>
                 </ul>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20orientações%20sobre%20Direito%20Cível."
@@ -2031,7 +1974,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Consultar sobre Cível &rarr;
+                  Consultar sobre Cível
                 </a>
               </div>
 
@@ -2052,9 +1995,9 @@
                   Suporte jurídico contínuo para micro, pequenas e médias empresas. Estruturação societária, acordos de sócios, governança preventiva e assessoria em negociações estratégicas.
                 </p>
                 <ul style="list-style: none; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--cor-texto-suave); display: flex; flex-direction: column; gap: 0.4rem;">
-                  <li>&bull; Acordos de quotistas e alterações contratuais</li>
-                  <li>&bull; Mitigação de riscos em contratos de fornecimento</li>
-                  <li>&bull; Recuperação de ativos e mediação empresarial</li>
+                  <li>Acordos de quotistas e alterações contratuais</li>
+                  <li>Mitigação de riscos em contratos de fornecimento</li>
+                  <li>Recuperação de ativos e mediação empresarial</li>
                 </ul>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20orientações%20sobre%20Direito%20Empresarial."
@@ -2062,18 +2005,17 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Consultar sobre Empresarial &rarr;
+                  Consultar sobre Empresarial
                 </a>
               </div>
 
               <!-- CTA Card Integrado -->
               <div class="card" style="background: var(--cor-primaria); border-color: var(--cor-borda-sutil); --item-idx: 5;">
-                <div class="section-badge" style="background: rgba(176, 141, 87, 0.2); color: var(--cor-marfim);">Atendimento Especial</div>
                 <h3 class="font-serif" style="color: var(--cor-marfim); font-size: 1.25rem; margin-bottom: 0.5rem;">
                   Sua dúvida envolve mais de uma área?
                 </h3>
                 <p class="card-desc" style="color: var(--cor-marfim); opacity: 0.9;">
-                  Nossa equipe interdisciplinar analisa o contexto integral do seu caso para sugerir os melhores caminhos técnicos.
+                  Nossa equipe analisa o contexto da sua demanda para orientar os encaminhamentos jurídicos pertinentes.
                 </p>
                 <a
                   href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20uma%20avaliação%20integrada%20do%20meu%20caso."
@@ -2097,7 +2039,6 @@
       <section id="equipe" class="section-padding m-reveal" style="background-color: var(--cor-fundo);" aria-label="Corpo jurídico do escritório">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Corpo Jurídico</div>
             <h2 class="section-title">Profissionais Comprometidos com a Boa Prática</h2>
             <p class="section-subtitle">
               Advogados dedicados ao estudo contínuo e à condução ética de cada causa sob nossa responsabilidade.
@@ -2128,7 +2069,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Contato profissional &rarr;
+                  Contato profissional
                 </a>
               </div>
 
@@ -2153,7 +2094,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Contato profissional &rarr;
+                  Contato profissional
                 </a>
               </div>
 
@@ -2178,7 +2119,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Contato profissional &rarr;
+                  Contato profissional
                 </a>
               </div>
             </div>
@@ -2193,7 +2134,6 @@
       <section id="atendimento" class="section-padding m-reveal" style="background-color: var(--cor-marfim);" aria-label="Metodologia de atendimento">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Metodologia</div>
             <h2 class="section-title">Como Funciona Nosso Atendimento</h2>
             <p class="section-subtitle">
               Processo estruturado em 4 etapas transparentes para garantir segurança e clareza desde a primeira consulta.
@@ -2205,7 +2145,7 @@
             <div class="m-carousel grid-4" data-carousel="atendimento" id="carouselAtendimento">
               <!-- Passo 1 -->
               <div class="step-card" style="--item-idx: 0;">
-                <div class="step-number">01</div>
+                <div class="step-number">1</div>
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.15rem; margin-bottom: 0.5rem;">
                   Primeiro Contato &amp; Triagem
                 </h3>
@@ -2216,7 +2156,7 @@
 
               <!-- Passo 2 -->
               <div class="step-card" style="--item-idx: 1;">
-                <div class="step-number">02</div>
+                <div class="step-number">2</div>
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.15rem; margin-bottom: 0.5rem;">
                   Análise Técnica &amp; Documentos
                 </h3>
@@ -2227,7 +2167,7 @@
 
               <!-- Passo 3 -->
               <div class="step-card" style="--item-idx: 2;">
-                <div class="step-number">03</div>
+                <div class="step-number">3</div>
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.15rem; margin-bottom: 0.5rem;">
                   Parecer &amp; Estratégia
                 </h3>
@@ -2238,7 +2178,7 @@
 
               <!-- Passo 4 -->
               <div class="step-card" style="--item-idx: 3;">
-                <div class="step-number">04</div>
+                <div class="step-number">4</div>
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.15rem; margin-bottom: 0.5rem;">
                   Acompanhamento Contínuo
                 </h3>
@@ -2269,7 +2209,6 @@
       <section id="orientacoes" class="section-padding m-reveal" style="background-color: var(--cor-fundo);" aria-label="Conteúdo útil e orientações gerais">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Prevenção Jurídica</div>
             <h2 class="section-title">Orientações Gerais &amp; Boas Práticas</h2>
             <p class="section-subtitle">
               Informações objetivas para auxiliá-lo na compreensão e preservação de seus direitos no dia a dia.
@@ -2296,7 +2235,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Tirar dúvidas sobre este tema &rarr;
+                    Tirar dúvidas sobre este tema
                   </a>
                 </div>
               </div>
@@ -2318,7 +2257,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Tirar dúvidas sobre inventário &rarr;
+                    Tirar dúvidas sobre inventário
                   </a>
                 </div>
               </div>
@@ -2340,7 +2279,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Tirar dúvidas sobre contratos &rarr;
+                    Tirar dúvidas sobre contratos
                   </a>
                 </div>
               </div>
@@ -2356,7 +2295,6 @@
       <section id="faq" class="section-padding m-reveal" style="background-color: var(--cor-marfim);" aria-label="Perguntas frequentes">
         <div class="container" style="max-width: 860px;">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Esclarecimentos</div>
             <h2 class="section-title">Perguntas Frequentes</h2>
             <p class="section-subtitle">
               Respostas claras para as principais dúvidas sobre atendimento, consultas e procedimentos jurídicos.
@@ -2372,7 +2310,7 @@
                 aria-controls="faq-ans-1"
                 id="faq-btn-1"
               >
-                <span>1. Como posso agendar uma consulta inicial com o escritório?</span>
+                <span>Como posso agendar uma consulta inicial com o escritório?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -2394,7 +2332,7 @@
                 aria-controls="faq-ans-2"
                 id="faq-btn-2"
               >
-                <span>2. O atendimento pode ser realizado de forma remota/online?</span>
+                <span>O atendimento pode ser realizado de forma remota/online?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -2402,8 +2340,8 @@
               <div id="faq-ans-2" class="faq-content" role="region" aria-labelledby="faq-btn-2">
                 <div class="faq-content-inner">
                   Sim. Atendemos clientes tanto presencialmente em nossa sede no Centro de Campinas quanto por
-                  videoconferência segura. Todas as etapas — envio de documentos, reuniões de alinhamento e assinaturas
-                  digitais — contam com total validade jurídica e sigilo garantido.
+                  videoconferência segura. Todas as etapas, como envio de documentos, reuniões de alinhamento e assinaturas
+                  digitais, contam com total validade jurídica e sigilo garantido.
                 </div>
               </div>
             </div>
@@ -2416,7 +2354,7 @@
                 aria-controls="faq-ans-3"
                 id="faq-btn-3"
               >
-                <span>3. Quais documentos devo separar para o primeiro atendimento?</span>
+                <span>Quais documentos devo separar para o primeiro atendimento?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -2438,7 +2376,7 @@
                 aria-controls="faq-ans-4"
                 id="faq-btn-4"
               >
-                <span>4. Como o escritório mantém o cliente informado sobre o andamento do caso?</span>
+                <span>Como o escritório mantém o cliente informado sobre o andamento do caso?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -2460,7 +2398,7 @@
                 aria-controls="faq-ans-5"
                 id="faq-btn-5"
               >
-                <span>5. O escritório prioriza a conciliação antes do litígio judicial?</span>
+                <span>O escritório prioriza a conciliação antes do litígio judicial?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
@@ -2494,7 +2432,6 @@
       <section id="ambiente" class="section-padding m-reveal" style="background-color: var(--cor-fundo);" aria-label="Ambiente do escritório">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Estrutura Física</div>
             <h2 class="section-title">Ambiente Planejado para Conforto e Sigilo</h2>
             <p class="section-subtitle">
               Instalações concebidas para receber clientes com discrição, comodidade e recursos tecnológicos no Centro de Campinas.
@@ -2658,7 +2595,6 @@
 
               <!-- Card Especial Integrado na Galeria -->
               <div class="card" style="background: var(--cor-marfim); border-color: var(--cor-borda-sutil); justify-content: center; --item-idx: 5;">
-                <div class="section-badge" style="background: rgba(176, 141, 87, 0.2); color: var(--cor-primaria);">Localização Central</div>
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.2rem; margin-bottom: 0.5rem;">
                   Venha nos visitar em Campinas
                 </h3>
@@ -2670,7 +2606,7 @@
                   class="btn btn-primary btn-sm"
                   style="margin-top: auto;"
                 >
-                  Ver localização no mapa &rarr;
+                  Ver localização no mapa
                 </a>
               </div>
             </div>
@@ -2685,7 +2621,6 @@
       <section id="contato" class="section-padding m-reveal" style="background-color: var(--cor-marfim);" aria-label="Contato e localização">
         <div class="container">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="section-badge">Atendimento &amp; Localização</div>
             <h2 class="section-title">Entre em Contato com Nossa Equipe</h2>
             <p class="section-subtitle">
               Estamos prontos para analisar sua demanda com discrição. Preencha o formulário ou fale diretamente pelo WhatsApp.
@@ -2695,7 +2630,7 @@
           <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem;" class="lg:grid-cols-2">
             <!-- Dados de Contato e Mapa do Google (iframe) -->
             <div>
-              <div style="background: #ffffff; border: 1px solid var(--cor-borda-sutil); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(59, 30, 42, 0.03);">
+              <div style="background: #ffffff; border: 1px solid var(--cor-borda-sutil); border-radius: 8px; padding: 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);">
                 <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.35rem; margin-bottom: 1.25rem;">
                   Informações Institucionais
                 </h3>
@@ -2711,7 +2646,7 @@
                     <div>
                       <strong style="color: var(--cor-primaria); display: block; font-size: 0.95rem;">Endereço:</strong>
                       <span style="color: var(--cor-texto-suave); font-size: 0.9rem;">
-                        Rua Barreto Leme, 100, sala 305 &bull; Centro, Campinas - SP &bull; CEP 13010-200
+                        Rua Barreto Leme, 100, sala 305, Centro, Campinas - SP, CEP 13010-200
                       </span>
                     </div>
                   </div>
@@ -2774,7 +2709,7 @@
               </div>
 
               <!-- Google Maps Iframe Embed -->
-              <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--cor-borda-sutil); box-shadow: 0 4px 15px rgba(59, 30, 42, 0.05); height: 240px; background: var(--cor-marfim);">
+              <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--cor-borda-sutil); box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05); height: 240px; background: var(--cor-marfim);">
                 <iframe
                   title="Localização do escritório Silva e Costa Advogados em Campinas"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.295213606775!2d-47.06173002381285!3d-22.90248467925828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8ad3bb8d2b7%3A0xb2bb352f2070fc19!2sR.%20Barreto%20Leme%2C%20100%20-%20Centro%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
@@ -2789,7 +2724,7 @@
             </div>
 
             <!-- Formulário de Contato Direto -->
-            <div style="background: #ffffff; border: 1px solid var(--cor-borda-sutil); border-radius: 12px; padding: 2rem; box-shadow: 0 8px 30px rgba(59, 30, 42, 0.04);">
+            <div style="background: #ffffff; border: 1px solid var(--cor-borda-sutil); border-radius: 8px; padding: 2rem; box-shadow: 0 1px 3px rgba(35, 26, 30, 0.05);">
               <h3 class="font-serif" style="color: var(--cor-primaria); font-size: 1.35rem; margin-bottom: 0.4rem;">
                 Envie sua Mensagem
               </h3>
@@ -3007,35 +2942,41 @@
           }
         });
 
-        // 1. Barra de Progresso de Rolagem Fina no Topo
-        const scrollBar = document.getElementById('scrollProgress');
-        if (scrollBar) {
-          window.addEventListener('scroll', function () {
-            const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
-            if (totalScrollable > 0) {
-              const progress = Math.min(Math.max(window.scrollY / totalScrollable, 0), 1);
-              scrollBar.style.transform = 'scaleX(' + progress + ')';
+        // Destaque do link ativo no menu conforme a rolagem da página
+        const navSections = document.querySelectorAll('section[id]');
+        const desktopNavLinks = document.querySelectorAll('.nav-desktop .nav-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-menu-drawer .mobile-menu-link');
+
+        function setActiveNavLink(currentId) {
+          desktopNavLinks.forEach(function (link) {
+            const href = link.getAttribute('href');
+            if (href === '#' + currentId) {
+              link.classList.add('is-active');
+            } else {
+              link.classList.remove('is-active');
             }
-          }, { passive: true });
+          });
+          mobileNavLinks.forEach(function (link) {
+            const href = link.getAttribute('href');
+            if (href === '#' + currentId) {
+              link.classList.add('is-active');
+            } else {
+              link.classList.remove('is-active');
+            }
+          });
         }
 
-        // 2. Animação de Entrada das Seções (IntersectionObserver, uma vez só)
-        if ('IntersectionObserver' in window && !prefersReducedMotion) {
-          const sectionObserver = new IntersectionObserver(function (entries) {
+        if ('IntersectionObserver' in window) {
+          const navObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
-                entry.target.classList.add('m-revealed');
-                sectionObserver.unobserve(entry.target);
+                setActiveNavLink(entry.target.id);
               }
             });
-          }, { threshold: 0.1 });
+          }, { rootMargin: '-20% 0px -70% 0px' });
 
-          document.querySelectorAll('.m-reveal').forEach(function (sec) {
-            sectionObserver.observe(sec);
-          });
-        } else {
-          document.querySelectorAll('.m-reveal').forEach(function (sec) {
-            sec.classList.add('m-revealed');
+          navSections.forEach(function (sec) {
+            navObserver.observe(sec);
           });
         }
 
