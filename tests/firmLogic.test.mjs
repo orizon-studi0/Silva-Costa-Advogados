@@ -1,49 +1,38 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  formatBrPhone,
-  validateContactFields,
-  buildWhatsAppUrl,
+  CAROUSEL_INTERVAL_MS,
+  getOfficeStatus,
   wrapSlideIndex,
+  shouldAutoRotateCarousel,
+  findNearestSlideIndex,
 } from '../script.js';
 
-test('formatBrPhone formats mobile and landline Brazilian numbers properly', () => {
-  assert.equal(formatBrPhone(''), '');
-  assert.equal(formatBrPhone('19'), '(19');
-  assert.equal(formatBrPhone('199988'), '(19) 9988');
-  assert.equal(formatBrPhone('19998887766'), '(19) 99888-7766');
-  assert.equal(formatBrPhone('(19) 99888-7766999'), '(19) 99888-7766');
-});
+test('getOfficeStatus resolves Campinas BRT business hours across weekdays and weekends', () => {
+  const monOpen = getOfficeStatus(new Date('2025-05-12T13:30:00Z')); // 10:30 BRT
+  assert.equal(monOpen.isOpen, true);
+  assert.equal(monOpen.label, 'Aberto agora');
+  assert.equal(monOpen.weekdayIndex, 1);
 
-test('validateContactFields enforces minimum name and phone digit counts', () => {
-  const invalidEmpty = validateContactFields('  ', '');
-  assert.equal(invalidEmpty.nomeValid, false);
-  assert.equal(invalidEmpty.telefoneValid, false);
+  const tueEarly = getOfficeStatus(new Date('2025-05-13T11:15:00Z')); // 08:15 BRT
+  assert.equal(tueEarly.isOpen, false);
+  assert.equal(tueEarly.label, 'Fechado, abre hoje às 9h');
 
-  const invalidShort = validateContactFields('Ab', '(19) 9988-776');
-  assert.equal(invalidShort.nomeValid, false);
-  assert.equal(invalidShort.telefoneValid, false);
+  const wedEvening = getOfficeStatus(new Date('2025-05-14T22:00:00Z')); // 19:00 BRT
+  assert.equal(wedEvening.isOpen, false);
+  assert.equal(wedEvening.label, 'Fechado, abre amanhã às 9h');
 
-  const valid = validateContactFields('  Carlos Eduardo  ', '(19) 99888-7766');
-  assert.equal(valid.nomeValid, true);
-  assert.equal(valid.telefoneValid, true);
-  assert.equal(valid.cleanName, 'Carlos Eduardo');
-  assert.equal(valid.phoneDigits, '19998887766');
-});
+  const friEvening = getOfficeStatus(new Date('2025-05-16T21:30:00Z')); // 18:30 BRT
+  assert.equal(friEvening.isOpen, false);
+  assert.equal(friEvening.label, 'Fechado, abre segunda às 9h');
 
-test('buildWhatsAppUrl builds properly encoded wa.me link with default fallback message', () => {
-  const url = buildWhatsAppUrl({
-    nome: 'Carlos Eduardo',
-    telefone: '(19) 99888-7766',
-    area: 'Direito Trabalhista',
-    mensagem: '  ',
-  });
-  assert.ok(url.startsWith('https://wa.me/5511999998888?text='));
-  const decoded = decodeURIComponent(url.split('?text=')[1]);
-  assert.match(decoded, /\*Nome:\* Carlos Eduardo/);
-  assert.match(decoded, /\*Telefone:\* \(19\) 99888-7766/);
-  assert.match(decoded, /\*Área de Interesse:\* Direito Trabalhista/);
-  assert.match(decoded, /Solicito agendamento de consulta inicial\./);
+  const sat = getOfficeStatus(new Date('2025-05-17T15:00:00Z')); // Sat 12:00 BRT
+  assert.equal(sat.isOpen, false);
+  assert.equal(sat.label, 'Fechado, abre segunda às 9h');
+
+  const sun = getOfficeStatus(new Date('2025-05-18T15:00:00Z')); // Sun 12:00 BRT
+  assert.equal(sun.isOpen, false);
+  assert.equal(sun.label, 'Fechado, abre amanhã às 9h');
 });
 
 test('wrapSlideIndex wraps forward and backward within gallery bounds', () => {
@@ -52,4 +41,63 @@ test('wrapSlideIndex wraps forward and backward within gallery bounds', () => {
   assert.equal(wrapSlideIndex(-1, 6), 5);
   assert.equal(wrapSlideIndex(7, 6), 1);
   assert.equal(wrapSlideIndex(3, 0), 0);
+});
+
+test('carousel auto-rotation uses 4s interval, runs only on mobile when visible and active', () => {
+  assert.equal(CAROUSEL_INTERVAL_MS, 4000);
+
+  assert.equal(
+    shouldAutoRotateCarousel({
+      isMobile: true,
+      isVisible: true,
+      isTabHidden: false,
+      reducedMotion: false,
+      isInteracting: false,
+    }),
+    true
+  );
+
+  // Desktop uses grid, never auto-rotates carousel
+  assert.equal(
+    shouldAutoRotateCarousel({
+      isMobile: false,
+      isVisible: true,
+      isTabHidden: false,
+      reducedMotion: false,
+      isInteracting: false,
+    }),
+    false
+  );
+
+  // Pauses when scrolled out of section
+  assert.equal(
+    shouldAutoRotateCarousel({
+      isMobile: true,
+      isVisible: false,
+      isTabHidden: false,
+      reducedMotion: false,
+      isInteracting: false,
+    }),
+    false
+  );
+
+  // Pauses when leaving page / tab hidden
+  assert.equal(
+    shouldAutoRotateCarousel({
+      isMobile: true,
+      isVisible: true,
+      isTabHidden: true,
+      reducedMotion: false,
+      isInteracting: false,
+    }),
+    false
+  );
+});
+
+test('findNearestSlideIndex selects the card closest to the track center', () => {
+  const centers = [195, 505, 815];
+  assert.equal(findNearestSlideIndex(centers, 195), 0);
+  assert.equal(findNearestSlideIndex(centers, 360), 1);
+  assert.equal(findNearestSlideIndex(centers, 790), 2);
+  assert.equal(findNearestSlideIndex([], 200), 0);
 });

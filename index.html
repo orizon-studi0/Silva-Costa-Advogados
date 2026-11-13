@@ -11,13 +11,11 @@
     <meta property="og:title" content="Silva &amp; Costa Advogados | Advocacia em Campinas - SP" />
     <meta
       property="og:description"
-      content="Atuação jurídica técnica, ética e acolhedora em Campinas e região: Direito Trabalhista, Família e Sucessões, Previdenciário, Cível e Empresarial."
+      content="Trabalhista, família, previdenciário, cível e empresarial em Campinas. Atendimento presencial e online, com análise individual de cada caso."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/recepcao-Bp7okd4u.jpg"
-    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="images/recepcao.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Silva &amp; Costa Advogados | Advocacia em Campinas - SP" />
     <meta
@@ -25,28 +23,25 @@
       content="Escritório de advocacia em Campinas - SP com atuação consultiva e contenciosa pautada pela ética profissional."
     />
 
-    <!-- Favicon monograma SC -->
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%233B0F18'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='14' fill='%23F3EEE4'%3ESC%3C/text%3E%3C/svg%3E"
     />
 
-    <!-- Google Fonts: Libre Caslon Text + Hanken Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Schema.org JSON-LD (LegalService) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LegalService",
         "name": "Silva & Costa Advogados",
-        "image": "https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/recepcao-Bp7okd4u.jpg",
+        "image": "images/recepcao.jpg",
         "description": "Escritório de advocacia em Campinas - SP com atuação técnica e ética em Direito Trabalhista, Família e Sucessões, Previdenciário, Cível e Empresarial.",
         "address": {
           "@type": "PostalAddress",
@@ -71,42 +66,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Barra de Progresso de Leitura -->
-    <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+    <header id="siteHeader" class="site-header">
+      <div class="container header-inner">
+        <a href="#inicio" class="brand-mark" aria-label="Silva e Costa Advogados — Início">
+          <span class="brand-monogram" aria-hidden="true">SC</span>
+          <span class="brand-name">Silva &amp; Costa</span>
+        </a>
 
-    <!-- Cabeçalho e Barra Superior -->
-    <div id="siteChrome" class="site-chrome">
-      <div class="utility-bar">
-        <div class="container utility-bar-inner">
-          <span>Campinas - SP · Rua Barreto Leme, 100, sala 305 · Seg a Sex, 9h às 18h</span>
-          <a
-            href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-            class="utility-bar-contact"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp: (11) 99999-8888
-          </a>
-        </div>
-      </div>
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#atuacao" class="nav-link">Áreas</a>
+          <a href="#equipe" class="nav-link">Equipe</a>
+          <a href="#atendimento" class="nav-link">Atendimento</a>
+          <a href="#orientacoes" class="nav-link">Orientações</a>
+          <a href="#faq" class="nav-link">Dúvidas</a>
+          <a href="#ambiente" class="nav-link">Ambiente</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </nav>
 
-      <header class="site-header">
-        <div class="container header-inner">
-          <a href="#inicio" class="brand-mark" aria-label="Silva e Costa Advogados — Início">
-            <span class="brand-monogram" aria-hidden="true">SC</span>
-            <span class="brand-name">Silva &amp; Costa Advogados</span>
-          </a>
-
-          <nav class="nav-desktop" aria-label="Navegação principal">
-            <a href="#sobre" class="nav-link">Sobre</a>
-            <a href="#atuacao" class="nav-link">Áreas</a>
-            <a href="#equipe" class="nav-link">Equipe</a>
-            <a href="#atendimento" class="nav-link">Como Funciona</a>
-            <a href="#orientacoes" class="nav-link">Orientações</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#ambiente" class="nav-link">Ambiente</a>
-            <a href="#contato" class="nav-link">Contato</a>
-          </nav>
+        <div class="header-right">
+          <span class="office-status" aria-live="polite">
+            <span id="officeStatusLabel" class="office-status-label">Seg–Sex · 9h às 18h</span>
+          </span>
 
           <a
             href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
@@ -118,512 +99,245 @@
           </a>
 
           <button
-            type="button"
             id="menuToggle"
             class="menu-toggle"
-            aria-label="Abrir menu de navegação"
+            type="button"
+            aria-label="Abrir menu"
             aria-expanded="false"
             aria-controls="mobileDrawer"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <line x1="3" y1="7" x2="21" y2="7"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="17" x2="21" y2="17"></line>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <line x1="3" y1="7" x2="21" y2="7" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="17" x2="21" y2="17" />
             </svg>
           </button>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
 
-    <!-- Menu Mobile Fullscreen em Vinho Escuro -->
-    <div id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação" aria-hidden="true">
+    <dialog id="mobileDrawer" class="mobile-drawer" aria-label="Menu de navegação">
       <div class="mobile-drawer-top">
-        <div class="mobile-drawer-brand">
-          <span class="brand-monogram" aria-hidden="true">SC</span>
-          <span>Silva &amp; Costa Advogados</span>
-        </div>
-        <button type="button" id="drawerClose" class="mobile-drawer-close" aria-label="Fechar menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+        <span class="brand-name">Silva &amp; Costa Advogados</span>
+        <button id="drawerClose" class="mobile-drawer-close" type="button" aria-label="Fechar menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <line x1="5" y1="5" x2="19" y2="19" />
+            <line x1="19" y1="5" x2="5" y2="19" />
           </svg>
         </button>
       </div>
 
-      <nav class="mobile-drawer-nav" aria-label="Seções do site">
-        <a href="#sobre" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">01</span>
-          <span>Sobre o Escritório</span>
-        </a>
-        <a href="#atuacao" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">02</span>
-          <span>Áreas de Atuação</span>
-        </a>
-        <a href="#equipe" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">03</span>
-          <span>Equipe</span>
-        </a>
-        <a href="#atendimento" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">04</span>
-          <span>Como Funciona</span>
-        </a>
-        <a href="#orientacoes" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">05</span>
-          <span>Orientações</span>
-        </a>
-        <a href="#faq" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">06</span>
-          <span>Perguntas Frequentes</span>
-        </a>
-        <a href="#ambiente" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">07</span>
-          <span>Ambiente</span>
-        </a>
-        <a href="#contato" class="mobile-drawer-link">
-          <span class="mobile-drawer-link-num">08</span>
-          <span>Contato e Localização</span>
-        </a>
+      <nav class="mobile-drawer-nav" aria-label="Menu mobile">
+        <a href="#inicio" class="mobile-drawer-link"><span class="mobile-drawer-num">01</span> Início</a>
+        <a href="#sobre" class="mobile-drawer-link"><span class="mobile-drawer-num">02</span> Sobre o Escritório</a>
+        <a href="#atuacao" class="mobile-drawer-link"><span class="mobile-drawer-num">03</span> Áreas de Atuação</a>
+        <a href="#equipe" class="mobile-drawer-link"><span class="mobile-drawer-num">04</span> Equipe</a>
+        <a href="#atendimento" class="mobile-drawer-link"><span class="mobile-drawer-num">05</span> Como Funciona</a>
+        <a href="#orientacoes" class="mobile-drawer-link"><span class="mobile-drawer-num">06</span> Orientações</a>
+        <a href="#faq" class="mobile-drawer-link"><span class="mobile-drawer-num">07</span> Perguntas Frequentes</a>
+        <a href="#ambiente" class="mobile-drawer-link"><span class="mobile-drawer-num">08</span> Ambiente</a>
+        <a href="#contato" class="mobile-drawer-link"><span class="mobile-drawer-num">09</span> Contato</a>
       </nav>
 
-      <div class="mobile-drawer-footer">
-        <p>Rua Barreto Leme, 100, sala 305 · Centro, Campinas - SP</p>
-        <a
-          href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-          class="btn btn-ivory-outline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conversar pelo WhatsApp
-        </a>
-      </div>
-    </div>
+      <a
+        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20Silva%20%26%20Costa."
+        class="btn btn-ivory-outline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Falar com a equipe no WhatsApp
+      </a>
+    </dialog>
 
-    <main>
-      <!-- 1. INÍCIO / HERO ASSIMÉTRICO -->
-      <section id="inicio" class="hero" aria-label="Apresentação do escritório">
-        <div class="container hero-grid">
+    <main id="conteudoPrincipal">
+      <!-- 1. INÍCIO (HERO EM TELA CHEIA COM FOTO DA RECEPÇÃO) -->
+      <section id="inicio" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 768px)" srcset="images/recepcao-mobile.jpg" />
+            <img
+              id="heroBgImg"
+              src="images/recepcao.jpg"
+              width="1376"
+              height="768"
+              fetchpriority="high"
+              decoding="async"
+              alt="Recepção do escritório Silva & Costa Advogados em Campinas com mesa de madeira e estantes jurídicas"
+            />
+          </picture>
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="container hero-content">
           <div class="hero-copy">
-            <span class="section-kicker">§ Advocacia em Campinas — SP</span>
-            <h1 class="display-title hero-title">
-              Prática jurídica técnica, ética e dedicada à segurança dos <em>seus</em> direitos.
-            </h1>
+            <span class="section-kicker hero-kicker">Campinas · São Paulo</span>
+            <h1 class="hero-title">Advocacia que <em>explica</em> antes de agir.</h1>
             <p class="hero-subtitle">
-              Atuação consultiva e contenciosa especializada para pessoas físicas e empresas. Atendimento transparente, fundamentado na legislação vigente e no respeito a cada caso.
+              Trabalhista, família, previdenciário, cível e empresarial em Campinas. Atendimento presencial e online, com análise individual de cada caso.
             </p>
             <div class="hero-actions">
               <a
-                href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-                class="btn btn-primary"
+                href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20sobre%20um%20atendimento."
+                class="btn btn-primary hero-cta-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Fale com nossa equipe
+                Falar com a equipe
               </a>
-              <a href="#atuacao" class="btn btn-outline">
-                <span>Conheça nossas áreas</span>
-                <span class="btn-arrow" aria-hidden="true">→</span>
+              <a
+                href="https://instagram.com/silvacostaadv"
+                class="btn btn-ivory-outline hero-cta-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Conheça nosso Instagram
               </a>
+              <a href="#atuacao" class="hero-link-areas">Ver áreas de atuação</a>
             </div>
-
-            <div class="hero-facts" aria-label="Resumo institucional">
-              <div class="hero-fact-item">
-                <span id="areasCounter" class="hero-fact-num" data-count="5">5</span>
-                <span>áreas de atuação</span>
-              </div>
-              <span class="hero-fact-sep" aria-hidden="true"></span>
-              <div class="hero-fact-item">
-                <span>Análise individualizada</span>
-              </div>
-              <span class="hero-fact-sep" aria-hidden="true"></span>
-              <div class="hero-fact-item">
-                <span>Centro, Campinas - SP</span>
-              </div>
+            <div class="hero-chips">
+              <span class="hero-chip">5 áreas</span>
+              <span class="hero-chip">Análise individual de cada caso</span>
+              <span class="hero-chip">Sede no Centro de Campinas</span>
             </div>
-          </div>
-
-          <div class="hero-media">
-            <div class="hero-photo-frame img-curtain is-revealed">
-              <img
-                id="heroParallaxImg"
-                src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/recepcao-Bp7okd4u.jpg"
-                alt="Recepção do escritório Silva e Costa Advogados em Campinas com revestimento em madeira e poltronas"
-                width="1200"
-                height="1500"
-                loading="eager"
-                fetchpriority="high"
-                referrerpolicy="no-referrer"
-              />
-            </div>
-            <p class="hero-photo-caption">Recepção · Rua Barreto Leme, 100 · Campinas</p>
           </div>
         </div>
       </section>
-
-      <hr class="section-rule" />
 
       <!-- 2. SOBRE O ESCRITÓRIO -->
-      <section id="sobre" class="section section--ivory" aria-label="Sobre o escritório">
-        <div class="container" data-reveal-group>
-          <div class="sobre-top">
-            <div>
-              <span class="section-kicker reveal-item">§ 01 — O Escritório</span>
-              <h2 class="section-title reveal-item">
-                Tradição técnica, escuta atenta e respeito <em>irrestrito</em> ao cliente
-              </h2>
-              <p class="sobre-highlight reveal-item">
-                Com sede no Centro de Campinas, o escritório Silva &amp; Costa Advogados une estudo jurídico contínuo e atendimento direto ao cliente. Compreendemos que cada questão de direito envolve patrimônio, família, estabilidade profissional e decisões importantes.
+      <section id="sobre" class="section section--ivory">
+        <div class="container">
+          <div class="sobre-grid reveal-block">
+            <div class="sobre-prose">
+              <span class="section-kicker">O Escritório</span>
+              <h2 class="section-title">Rigor jurídico e escuta atenta em cada demanda.</h2>
+              <p class="sobre-lead-quote">
+                Atuamos de forma consultiva e contenciosa para pessoas físicas e empresas, traduzindo regras e documentos em decisões objetivas.
               </p>
+              <p>
+                Com sede no Centro de Campinas, a Silva &amp; Costa Advogados reúne atuação multidisciplinar nas áreas trabalhista, previdenciária, cível, familiar e empresarial, sempre em observância estrita ao Código de Ética da OAB.
+              </p>
+            </div>
 
-              <div id="sobreDisclosureBody" class="sobre-disclosure-body">
-                <div class="sobre-disclosure-inner">
-                  <p>
-                    Nossa atuação é estritamente pautada pela ética profissional, pela clareza das orientações e pelo cuidado tanto na prevenção quanto no acompanhamento de processos judiciais, priorizando o esclarecimento honesto de cenários, documentos e possibilidades legais.
-                  </p>
+            <ul class="values-list" aria-label="Valores do escritório">
+              <li class="values-row">
+                <span class="values-num">01</span>
+                <div>
+                  <h3 class="values-title">Análise Prévia Criteriosa</h3>
+                  <p class="values-desc">Exame cuidadoso dos fatos, provas e riscos jurídicos antes de qualquer recomendação formal.</p>
                 </div>
-              </div>
-
-              <button
-                type="button"
-                id="sobreDisclosureBtn"
-                class="disclosure-btn reveal-item"
-                aria-expanded="false"
-                aria-controls="sobreDisclosureBody"
-              >
-                <span class="disclosure-label">Ler mais sobre o escritório</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-
-              <ul class="values-list reveal-item">
-                <li class="values-row">
-                  <span class="values-num">01</span>
-                  <div>
-                    <h3 class="values-title">Análise Prévia Criteriosa</h3>
-                    <p class="values-desc">Exame detalhado da documentação e da viabilidade jurídica antes de qualquer medida judicial ou extrajudicial.</p>
-                  </div>
-                </li>
-                <li class="values-row">
-                  <span class="values-num">02</span>
-                  <div>
-                    <h3 class="values-title">Comunicação Transparente</h3>
-                    <p class="values-desc">Linguagem objetiva e resumos periódicos sobre cada movimentação e etapa do procedimento.</p>
-                  </div>
-                </li>
-                <li class="values-row">
-                  <span class="values-num">03</span>
-                  <div>
-                    <h3 class="values-title">Sigilo e Confidencialidade</h3>
-                    <p class="values-desc">Atendimento reservado e tratamento discreto de documentos, dados pessoais e informações empresariais.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="reveal-item">
-              <div class="sobre-photo-wrap img-curtain">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/sala-socio-B5Dl42mP.jpg"
-                  alt="Sala reservada de atendimento do escritório Silva e Costa Advogados com mesa de madeira e estante jurídica"
-                  width="1200"
-                  height="900"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-            </div>
+              </li>
+              <li class="values-row">
+                <span class="values-num">02</span>
+                <div>
+                  <h3 class="values-title">Comunicação Transparente</h3>
+                  <p class="values-desc">Explicação direta sobre prazos, alternativas extrajudiciais, etapas processuais e custos envolvidos.</p>
+                </div>
+              </li>
+              <li class="values-row">
+                <span class="values-num">03</span>
+                <div>
+                  <h3 class="values-title">Sigilo e Confidencialidade</h3>
+                  <p class="values-desc">Guarda reservada de relatos, contratos e documentos sob sigilo profissional desde o primeiro contato.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- FAIXA INSTITUCIONAL EM VINHO ESCURO -->
-      <div class="commitments-band section--wine-dark" aria-label="Compromissos institucionais">
-        <div class="container" data-reveal-group>
-          <div class="commitments-header reveal-item">
+      <!-- COMPROMISSOS INSTITUCIONAIS -->
+      <section class="commitments-band section--wine-dark" aria-label="Compromissos Institucionais">
+        <div class="container reveal-block">
+          <div class="commitments-header">
             <span class="section-kicker">Compromissos Institucionais</span>
-            <h2 class="commitments-title">Princípios que orientam cada <em>atendimento</em></h2>
+            <h2 class="section-title">Princípios que orientam o trabalho diário.</h2>
           </div>
 
           <div class="commitments-grid">
-            <div class="commitment-col reveal-item">
+            <article class="commitment-item">
               <span class="commitment-roman">I.</span>
               <h3 class="commitment-heading">Rigor Técnico e Atualização</h3>
-              <p class="commitment-text">
-                Acompanhamento contínuo da legislação e da jurisprudência dos tribunais superiores (STF, STJ e TST) aplicável a cada demanda.
-              </p>
-            </div>
-            <div class="commitment-col reveal-item">
+              <p class="commitment-text">Acompanhamento contínuo da jurisprudência dos tribunais superiores e da legislação aplicável a cada caso.</p>
+            </article>
+            <article class="commitment-item">
               <span class="commitment-roman">II.</span>
               <h3 class="commitment-heading">Respeito ao Código de Ética da OAB</h3>
-              <p class="commitment-text">
-                Prática exclusivamente informativa, sem promessas de resultado e em conformidade com os preceitos da advocacia brasileira.
-              </p>
-            </div>
-            <div class="commitment-col reveal-item">
+              <p class="commitment-text">Atuação informativa e responsável, sem promessas de resultado e com total independência técnica.</p>
+            </article>
+            <article class="commitment-item">
               <span class="commitment-roman">III.</span>
               <h3 class="commitment-heading">Acolhimento Humano e Acessível</h3>
-              <p class="commitment-text">
-                Escuta atenciosa desde o primeiro contato, esclarecendo prazos, documentos e caminhos jurídicos com serenidade.
-              </p>
-            </div>
+              <p class="commitment-text">Atendimento cordial no Centro de Campinas ou por videoconferência, adequado à rotina de cada cliente.</p>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
 
-      <hr class="section-rule" />
-
-      <!-- 3. ÁREAS DE ATUAÇÃO — ÍNDICE EDITORIAL -->
-      <section id="atuacao" class="section section--paper" aria-label="Áreas de atuação jurídica">
-        <div class="container" data-reveal-group>
-          <div class="practice-header">
-            <span class="section-kicker reveal-item">§ 02 — Áreas de Atuação</span>
-            <h2 class="section-title reveal-item">
-              Atuação especializada em cinco <em>ramos</em> do Direito
-            </h2>
-            <p class="section-lead reveal-item">
-              Assessoria jurídica consultiva e contenciosa para demandas individuais, familiares e empresariais. Selecione uma área para ver os temas atendidos.
-            </p>
+      <!-- 3. ÁREAS DE ATUAÇÃO (CARROSSEL COM GAVETA DE DETALHES) -->
+      <section id="atuacao" class="section section--paper">
+        <div class="container">
+          <div class="carousel-header reveal-block">
+            <span class="section-kicker">Áreas de Atuação</span>
+            <h2 class="section-title">Cinco frentes jurídicas de atuação integrada.</h2>
+            <p class="section-lead">Toque em qualquer área para ler o escopo completo e os principais serviços realizados.</p>
           </div>
 
-          <div id="practiceIndex" class="practice-index reveal-item">
-            <!-- 01. Trabalhista -->
-            <div class="practice-item">
-              <button
-                type="button"
-                class="practice-trigger"
-                aria-expanded="false"
-                aria-controls="practice-panel-1"
-                id="practice-btn-1"
-              >
-                <span class="practice-num">01</span>
-                <span class="practice-name">Direito Trabalhista</span>
-                <span class="practice-summary">Relações individuais, rescisões e consultoria preventiva</span>
-                <span class="practice-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
+          <div class="carousel-shell grid-desktop-areas" data-carousel>
+            <div
+              class="carousel-track"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Áreas de atuação do escritório"
+              tabindex="0"
+            >
+              <button type="button" class="carousel-card carousel-card-btn" data-area-id="trabalhista">
+                <span class="card-num">01</span>
+                <h3 class="card-title">Direito Trabalhista</h3>
+                <p class="card-desc">Rescisões, conferência de verbas, reclamações e consultoria preventiva para empregados e empresas.</p>
+                <span class="card-hint">Ver detalhes e 3 serviços</span>
               </button>
-              <div id="practice-panel-1" class="practice-panel" role="region" aria-labelledby="practice-btn-1">
-                <div class="practice-panel-inner">
-                  <div class="practice-panel-content">
-                    <div>
-                      <p class="practice-desc">
-                        Assessoria em relações individuais e coletivas de trabalho. Análise de contratos, rescisões, horas extras, adicionais, estabilidades e rotinas preventivas para redução de passivos.
-                      </p>
-                      <a
-                        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%B5es%20sobre%20Direito%20Trabalhista."
-                        class="link-arrow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Consultar sobre Direito Trabalhista</span>
-                        <span class="arrow-glyph" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                    <ul class="practice-services">
-                      <li>Rescisões contratuais e conferência de verbas devidas</li>
-                      <li>Reclamatórias e defesas técnicas na Justiça do Trabalho</li>
-                      <li>Consultoria preventiva para empregadores</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-area-id="familia">
+                <span class="card-num">02</span>
+                <h3 class="card-title">Direito de Família e Sucessões</h3>
+                <p class="card-desc">Inventários em cartório ou judiciais, partilhas, divórcios, guarda, alimentos e planejamento sucessório.</p>
+                <span class="card-hint">Ver detalhes e 3 serviços</span>
+              </button>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-area-id="previdenciario">
+                <span class="card-num">03</span>
+                <h3 class="card-title">Direito Previdenciário</h3>
+                <p class="card-desc">Planejamento previdenciário, contagem de tempo, aposentadorias, pensões e recursos junto ao INSS.</p>
+                <span class="card-hint">Ver detalhes e 3 serviços</span>
+              </button>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-area-id="civel">
+                <span class="card-num">04</span>
+                <h3 class="card-title">Direito Cível e Contratos</h3>
+                <p class="card-desc">Elaboração e revisão contratual, ações indenizatórias, cobranças e demandas imobiliárias.</p>
+                <span class="card-hint">Ver detalhes e 3 serviços</span>
+              </button>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-area-id="empresarial">
+                <span class="card-num">05</span>
+                <h3 class="card-title">Direito Empresarial</h3>
+                <p class="card-desc">Acordos de sócios, contratos comerciais, mitigação de riscos e suporte contínuo a negócios.</p>
+                <span class="card-hint">Ver detalhes e 3 serviços</span>
+              </button>
             </div>
 
-            <!-- 02. Família e Sucessões -->
-            <div class="practice-item">
-              <button
-                type="button"
-                class="practice-trigger"
-                aria-expanded="false"
-                aria-controls="practice-panel-2"
-                id="practice-btn-2"
-              >
-                <span class="practice-num">02</span>
-                <span class="practice-name">Direito de Família e Sucessões</span>
-                <span class="practice-summary">Inventários, partilhas, planejamento sucessório e divórcios</span>
-                <span class="practice-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="practice-panel-2" class="practice-panel" role="region" aria-labelledby="practice-btn-2">
-                <div class="practice-panel-inner">
-                  <div class="practice-panel-content">
-                    <div>
-                      <p class="practice-desc">
-                        Condução cuidadosa e equilibrada de inventários judiciais e extrajudiciais, planejamento sucessório, divórcios consensuais e litigiosos, pensão alimentícia e regulamentação de guarda.
-                      </p>
-                      <a
-                        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%B5es%20sobre%20Direito%20de%20Fam%C3%ADlia%20e%20Sucess%C3%B5es."
-                        class="link-arrow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Consultar sobre Família e Sucessões</span>
-                        <span class="arrow-glyph" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                    <ul class="practice-services">
-                      <li>Inventários em cartório e via judicial</li>
-                      <li>Planejamento sucessório e partilha de bens</li>
-                      <li>Divórcios e reconhecimento de união estável</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 03. Previdenciário -->
-            <div class="practice-item">
-              <button
-                type="button"
-                class="practice-trigger"
-                aria-expanded="false"
-                aria-controls="practice-panel-3"
-                id="practice-btn-3"
-              >
-                <span class="practice-num">03</span>
-                <span class="practice-name">Direito Previdenciário</span>
-                <span class="practice-summary">Planejamento no INSS, aposentadorias, pensões e revisões</span>
-                <span class="practice-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="practice-panel-3" class="practice-panel" role="region" aria-labelledby="practice-btn-3">
-                <div class="practice-panel-inner">
-                  <div class="practice-panel-content">
-                    <div>
-                      <p class="practice-desc">
-                        Planejamento minucioso junto ao INSS. Simulação e contagem de tempo de contribuição, aposentadorias por tempo, idade e especiais, auxílios e revisões administrativas ou judiciais.
-                      </p>
-                      <a
-                        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%B5es%20sobre%20Direito%20Previdenci%C3%A1rio."
-                        class="link-arrow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Consultar sobre Direito Previdenciário</span>
-                        <span class="arrow-glyph" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                    <ul class="practice-services">
-                      <li>Planejamento previdenciário e contagem de contribuições</li>
-                      <li>Requerimentos de aposentadorias e pensões por morte</li>
-                      <li>Recursos administrativos e ações previdenciárias</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 04. Cível e Contratos -->
-            <div class="practice-item">
-              <button
-                type="button"
-                class="practice-trigger"
-                aria-expanded="false"
-                aria-controls="practice-panel-4"
-                id="practice-btn-4"
-              >
-                <span class="practice-num">04</span>
-                <span class="practice-name">Direito Cível e Contratos</span>
-                <span class="practice-summary">Contratos, obrigações, reparações civis e imóveis</span>
-                <span class="practice-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="practice-panel-4" class="practice-panel" role="region" aria-labelledby="practice-btn-4">
-                <div class="practice-panel-inner">
-                  <div class="practice-panel-content">
-                    <div>
-                      <p class="practice-desc">
-                        Redação e revisão de instrumentos contratuais, reparações civis, disputas imobiliárias, cobranças de títulos e resolução de conflitos patrimoniais.
-                      </p>
-                      <a
-                        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%B5es%20sobre%20Direito%20C%C3%ADvel."
-                        class="link-arrow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Consultar sobre Cível e Contratos</span>
-                        <span class="arrow-glyph" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                    <ul class="practice-services">
-                      <li>Elaboração e revisão técnica de contratos</li>
-                      <li>Ações indenizatórias e cobranças judiciais</li>
-                      <li>Questões imobiliárias, locações e possessórias</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 05. Empresarial -->
-            <div class="practice-item">
-              <button
-                type="button"
-                class="practice-trigger"
-                aria-expanded="false"
-                aria-controls="practice-panel-5"
-                id="practice-btn-5"
-              >
-                <span class="practice-num">05</span>
-                <span class="practice-name">Direito Empresarial</span>
-                <span class="practice-summary">Estruturação societária, acordos de sócios e governança</span>
-                <span class="practice-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="practice-panel-5" class="practice-panel" role="region" aria-labelledby="practice-btn-5">
-                <div class="practice-panel-inner">
-                  <div class="practice-panel-content">
-                    <div>
-                      <p class="practice-desc">
-                        Suporte jurídico contínuo para micro, pequenas e médias empresas. Estruturação societária, acordos de sócios, governança preventiva e assessoria em negociações comerciais.
-                      </p>
-                      <a
-                        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%B5es%20sobre%20Direito%20Empresarial."
-                        class="link-arrow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Consultar sobre Direito Empresarial</span>
-                        <span class="arrow-glyph" aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                    <ul class="practice-services">
-                      <li>Acordos de quotistas e alterações contratuais</li>
-                      <li>Mitigação de riscos em contratos de fornecimento</li>
-                      <li>Recuperação de créditos e mediação empresarial</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="carousel-controls">
+              <div class="carousel-dots" role="tablist" aria-label="Selecionar área"></div>
             </div>
           </div>
 
-          <div class="practice-multi-cta reveal-item">
+          <div class="multiarea-banner reveal-block">
             <div>
               <h3>Sua dúvida envolve mais de uma área?</h3>
-              <p>Nossa equipe analisa o contexto completo da sua demanda para orientar os encaminhamentos jurídicos pertinentes.</p>
+              <p>Muitas situações exigem visão conjunta trabalhista, patrimonial, familiar e contratual. Encaminhe seu relato para avaliação técnica integrada.</p>
             </div>
             <a
-              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20integrada%20do%20meu%20caso."
+              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Minha%20d%C3%BAvida%20envolve%20mais%20de%20uma%20%C3%A1rea%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica."
               class="btn btn-ivory-outline"
               target="_blank"
               rel="noopener noreferrer"
@@ -634,848 +348,672 @@
         </div>
       </section>
 
-      <hr class="section-rule" />
-
       <!-- 4. EQUIPE -->
-      <section id="equipe" class="section section--ivory" aria-label="Corpo jurídico do escritório">
-        <div class="container" data-reveal-group>
-          <span class="section-kicker reveal-item">§ 03 — Corpo Jurídico</span>
-          <h2 class="section-title reveal-item">
-            Profissionais comprometidos com a <em>boa</em> prática
-          </h2>
-          <p class="section-lead reveal-item" style="margin-bottom: clamp(2rem, 4vw, 3rem);">
-            Advogados inscritos na OAB/SP dedicados ao estudo contínuo e à condução responsável de cada demanda.
-          </p>
-
-          <div id="teamCarousel" class="team-carousel reveal-item">
-            <!-- Advogado 1 -->
-            <article class="team-card">
-              <div class="team-portrait" aria-label="Monograma AS de Dr. Arthur Barreto Silva">
-                <span class="team-monogram" aria-hidden="true">AS</span>
-              </div>
-              <h3 class="team-name">Dr. Arthur Barreto Silva</h3>
-              <div class="team-meta">
-                <span>OAB/SP 284.195</span>
-                <span>·</span>
-                <span>Direito Cível &amp; Empresarial</span>
-              </div>
-              <div class="team-bio-wrap" id="team-bio-1">
-                <div class="team-bio-inner">
-                  <p class="team-bio-text">
-                    Graduado pela PUC-Campinas, especialista em Direito dos Contratos e Processo Civil. Atuação focada em governança preventiva, renegociações complexas e contencioso estratégico.
-                  </p>
-                </div>
-              </div>
-              <div class="team-actions">
-                <button
-                  type="button"
-                  class="team-bio-toggle"
-                  aria-expanded="false"
-                  aria-controls="team-bio-1"
-                >
-                  Ver formação
-                </button>
-                <a
-                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Dr.%20Arthur%20Barreto%20Silva."
-                  class="link-arrow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Contato profissional</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
-
-            <!-- Advogado 2 -->
-            <article class="team-card">
-              <div class="team-portrait" aria-label="Monograma HC de Dra. Helena Mendes Costa">
-                <span class="team-monogram" aria-hidden="true">HC</span>
-              </div>
-              <h3 class="team-name">Dra. Helena Mendes Costa</h3>
-              <div class="team-meta">
-                <span>OAB/SP 312.840</span>
-                <span>·</span>
-                <span>Direito Trabalhista &amp; Previdenciário</span>
-              </div>
-              <div class="team-bio-wrap" id="team-bio-2">
-                <div class="team-bio-inner">
-                  <p class="team-bio-text">
-                    Pós-graduada em Seguridade Social e Relações do Trabalho. Ampla vivência em auditorias trabalhistas, cálculos previdenciários e acompanhamento perante órgãos administrativos.
-                  </p>
-                </div>
-              </div>
-              <div class="team-actions">
-                <button
-                  type="button"
-                  class="team-bio-toggle"
-                  aria-expanded="false"
-                  aria-controls="team-bio-2"
-                >
-                  Ver formação
-                </button>
-                <a
-                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Dra.%20Helena%20Mendes%20Costa."
-                  class="link-arrow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Contato profissional</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
-
-            <!-- Advogado 3 -->
-            <article class="team-card">
-              <div class="team-portrait" aria-label="Monograma RA de Dr. Rodrigo Sampaio Alencar">
-                <span class="team-monogram" aria-hidden="true">RA</span>
-              </div>
-              <h3 class="team-name">Dr. Rodrigo Sampaio Alencar</h3>
-              <div class="team-meta">
-                <span>OAB/SP 345.922</span>
-                <span>·</span>
-                <span>Direito de Família &amp; Sucessões</span>
-              </div>
-              <div class="team-bio-wrap" id="team-bio-3">
-                <div class="team-bio-inner">
-                  <p class="team-bio-text">
-                    Especialista em Direito das Famílias e Planejamento Sucessório. Dedica-se à condução serena de inventários, partilhas amigáveis e mediação de conflitos patrimoniais.
-                  </p>
-                </div>
-              </div>
-              <div class="team-actions">
-                <button
-                  type="button"
-                  class="team-bio-toggle"
-                  aria-expanded="false"
-                  aria-controls="team-bio-3"
-                >
-                  Ver formação
-                </button>
-                <a
-                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Dr.%20Rodrigo%20Sampaio%20Alencar."
-                  class="link-arrow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Contato profissional</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
+      <section id="equipe" class="section section--ivory">
+        <div class="container">
+          <div class="carousel-header reveal-block">
+            <span class="section-kicker">Equipe</span>
+            <h2 class="section-title">Advogados responsáveis pelo atendimento.</h2>
+            <p class="section-lead">Atuação direta dos sócios e associados em cada etapa da análise jurídica.</p>
           </div>
 
-          <div class="team-snap-nav">
-            <button type="button" id="teamPrev" class="team-snap-btn" aria-label="Advogado anterior">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <button type="button" id="teamNext" class="team-snap-btn" aria-label="Próximo advogado">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
+          <div class="carousel-shell grid-desktop-3" data-carousel>
+            <div
+              class="carousel-track"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Equipe de advogados"
+              tabindex="0"
+            >
+              <article class="carousel-card">
+                <div class="media-slot media-slot--portrait">
+                  <span class="team-monogram" aria-hidden="true">AS</span>
+                </div>
+                <p class="team-meta">OAB/SP 284.195 · Cível &amp; Empresarial</p>
+                <h3 class="card-title">Dr. Arthur Barreto Silva</h3>
+                <p class="card-desc">Advogado graduado pela PUC-Campinas, com especialização em Direito Contratual e Societário. Atua na estruturação de negócios e resolução de conflitos patrimoniais.</p>
+                <a
+                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20contato%20profissional%20com%20Dr.%20Arthur%20Barreto%20Silva."
+                  class="link-arrow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contato profissional
+                </a>
+              </article>
+
+              <article class="carousel-card">
+                <div class="media-slot media-slot--portrait">
+                  <span class="team-monogram" aria-hidden="true">HC</span>
+                </div>
+                <p class="team-meta">OAB/SP 312.840 · Trabalhista &amp; Previdenciário</p>
+                <h3 class="card-title">Dra. Helena Mendes Costa</h3>
+                <p class="card-desc">Especialista em Direito e Processo do Trabalho e em Direito Previdenciário. Dedica-se à consultoria preventiva, contencioso laboral e planejamento junto ao INSS.</p>
+                <a
+                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20contato%20profissional%20com%20Dra.%20Helena%20Mendes%20Costa."
+                  class="link-arrow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contato profissional
+                </a>
+              </article>
+
+              <article class="carousel-card">
+                <div class="media-slot media-slot--portrait">
+                  <span class="team-monogram" aria-hidden="true">RA</span>
+                </div>
+                <p class="team-meta">OAB/SP 345.922 · Família &amp; Sucessões</p>
+                <h3 class="card-title">Dr. Rodrigo Sampaio Alencar</h3>
+                <p class="card-desc">Pós-graduado em Direito das Famílias e Sucessões. Conduz inventários extrajudiciais e judiciais, partilhas e acordos familiares com abordagem equilibrada.</p>
+                <a
+                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20contato%20profissional%20com%20Dr.%20Rodrigo%20Sampaio%20Alencar."
+                  class="link-arrow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contato profissional
+                </a>
+              </article>
+            </div>
+
+            <div class="carousel-controls">
+              <div class="carousel-dots" role="tablist" aria-label="Selecionar profissional"></div>
+            </div>
           </div>
         </div>
       </section>
-
-      <hr class="section-rule" />
 
       <!-- 5. COMO FUNCIONA -->
-      <section id="atendimento" class="section section--paper" aria-label="Como funciona nosso atendimento">
-        <div class="container" data-reveal-group>
-          <span class="section-kicker reveal-item">§ 04 — Método de Atendimento</span>
-          <h2 class="section-title reveal-item">
-            Como funciona nosso <em>atendimento</em>
-          </h2>
-          <p class="section-lead reveal-item">
-            Fluxo organizado em quatro etapas claras, do primeiro contato ao acompanhamento contínuo da sua demanda.
-          </p>
-
-          <div id="timelineWrap" class="timeline-wrap">
-            <div class="timeline-track" aria-hidden="true">
-              <div id="timelineProgress" class="timeline-progress"></div>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-step">
-                <span class="timeline-roman" aria-hidden="true">I</span>
-                <h3 class="timeline-step-title">Primeiro Contato &amp; Triagem</h3>
-                <p class="timeline-step-desc">
-                  Você envia uma mensagem resumindo a situação. Nossa equipe realiza a triagem inicial e agenda o horário da consulta.
-                </p>
-              </li>
-              <li class="timeline-step">
-                <span class="timeline-roman" aria-hidden="true">II</span>
-                <h3 class="timeline-step-title">Análise Técnica &amp; Documentos</h3>
-                <p class="timeline-step-desc">
-                  Exame aprofundado de contratos, comprovantes e certidões, confrontando os fatos com a legislação e a jurisprudência atual.
-                </p>
-              </li>
-              <li class="timeline-step">
-                <span class="timeline-roman" aria-hidden="true">III</span>
-                <h3 class="timeline-step-title">Parecer &amp; Estratégia</h3>
-                <p class="timeline-step-desc">
-                  Apresentação clara das alternativas jurídicas cabíveis, riscos envolvidos e caminhos recomendados para sua decisão consciente.
-                </p>
-              </li>
-              <li class="timeline-step">
-                <span class="timeline-roman" aria-hidden="true">IV</span>
-                <h3 class="timeline-step-title">Acompanhamento Contínuo</h3>
-                <p class="timeline-step-desc">
-                  Condução zelosa da medida escolhida, com atualizações periódicas e canal aberto para esclarecimento de dúvidas.
-                </p>
-              </li>
-            </ol>
+      <section id="atendimento" class="section section--paper">
+        <div class="container">
+          <div class="carousel-header reveal-block">
+            <span class="section-kicker">Como Funciona</span>
+            <h2 class="section-title">Quatro etapas até uma definição segura.</h2>
+            <p class="section-lead">Fluxo organizado para ouvir seu relato, analisar documentos e apresentar caminhos concretos.</p>
           </div>
 
-          <div class="reveal-item">
-            <a
-              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-              class="btn btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div class="carousel-shell grid-desktop-4" data-carousel>
+            <div
+              class="carousel-track"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Etapas do atendimento"
+              tabindex="0"
             >
-              Iniciar atendimento no WhatsApp
-            </a>
+              <article class="carousel-card">
+                <span class="card-roman">I</span>
+                <h3 class="card-title">Primeiro Contato &amp; Triagem</h3>
+                <p class="card-desc">Recebemos o resumo da situação por WhatsApp ou telefone e agendamos o horário presencial em Campinas ou online.</p>
+              </article>
+
+              <article class="carousel-card">
+                <span class="card-roman">II</span>
+                <h3 class="card-title">Análise Técnica &amp; Documentos</h3>
+                <p class="card-desc">Avaliação detalhada de contratos, certidões, prazos prescricionais e eventuais riscos jurídicos envolvidos.</p>
+              </article>
+
+              <article class="carousel-card">
+                <span class="card-roman">III</span>
+                <h3 class="card-title">Parecer &amp; Estratégia</h3>
+                <p class="card-desc">Apresentamos as alternativas possíveis, seja via acordo extrajudicial, procedimento em cartório ou medida judicial.</p>
+              </article>
+
+              <article class="carousel-card">
+                <span class="card-roman">IV</span>
+                <h3 class="card-title">Acompanhamento Contínuo</h3>
+                <p class="card-desc">Execução técnica das medidas definidas com atualizações claras a cada movimentação relevante.</p>
+              </article>
+            </div>
+
+            <div class="carousel-controls">
+              <div class="carousel-dots" role="tablist" aria-label="Selecionar etapa"></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <hr class="section-rule" />
-
-      <!-- 6. ORIENTAÇÕES GERAIS -->
-      <section id="orientacoes" class="section section--ivory" aria-label="Orientações gerais e boas práticas">
-        <div class="container" data-reveal-group>
-          <span class="section-kicker reveal-item">§ 05 — Orientações Gerais</span>
-          <h2 class="section-title reveal-item">
-            Informações úteis e <em>boas</em> práticas
-          </h2>
-          <p class="section-lead reveal-item">
-            Textos informativos preparados pela equipe para auxiliar na organização de documentos e na compreensão preventiva de direitos.
-          </p>
-
-          <div class="articles-grid">
-            <!-- Artigo principal (ocupa 2 linhas no desktop) -->
-            <article class="article-cover article-cover--lead reveal-item">
-              <div class="article-cover-body">
-                <span class="article-category">Relações de Trabalho</span>
-                <h3 class="article-title">A Importância da Documentação Laboral</h3>
-                <p class="article-excerpt">
-                  Manter comprovantes de pagamento, registros de ponto, comunicações formais e termos de rescisão organizados é essencial para que trabalhadores e empregadores preveniam litígios e demonstrem com clareza o cumprimento das obrigações contratuais.
-                </p>
-                <button type="button" class="article-read-btn" data-article="laboral">
-                  <span>Ler orientação completa</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
-
-            <!-- Artigo 2 -->
-            <article class="article-cover reveal-item">
-              <div class="article-cover-body">
-                <span class="article-category">Família &amp; Patrimônio</span>
-                <h3 class="article-title">Inventário: Vantagens da Via Extrajudicial</h3>
-                <p class="article-excerpt">
-                  Quando todos os herdeiros são maiores, capazes e há consenso na partilha, o inventário pode ser lavrado em tabelionato de notas, com trâmite mais célere e menor desgaste familiar.
-                </p>
-                <button type="button" class="article-read-btn" data-article="inventario">
-                  <span>Ler orientação completa</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
-
-            <!-- Artigo 3 -->
-            <article class="article-cover reveal-item">
-              <div class="article-cover-body">
-                <span class="article-category">Negócios &amp; Contratos</span>
-                <h3 class="article-title">Cláusulas Essenciais em Contratos Comerciais</h3>
-                <p class="article-excerpt">
-                  Definir com precisão o objeto, prazos de entrega, multas rescisórias, foro de eleição e limites de responsabilidade resguarda investimentos e reduz impasses com fornecedores e parceiros.
-                </p>
-                <button type="button" class="article-read-btn" data-article="contratos">
-                  <span>Ler orientação completa</span>
-                  <span class="arrow-glyph" aria-hidden="true">→</span>
-                </button>
-              </div>
-            </article>
+      <!-- 6. ORIENTAÇÕES JURÍDICAS (CARROSSEL + GAVETA DE LEITURA) -->
+      <section id="orientacoes" class="section section--ivory">
+        <div class="container">
+          <div class="carousel-header reveal-block">
+            <span class="section-kicker">Orientações</span>
+            <h2 class="section-title">Notas informativas para decisões cotidianas.</h2>
+            <p class="section-lead">Conteúdo exclusivamente informativo, elaborado em conformidade com as normas da OAB.</p>
           </div>
-        </div>
-      </section>
 
-      <hr class="section-rule" />
-
-      <!-- 7. PERGUNTAS FREQUENTES -->
-      <section id="faq" class="section section--paper" aria-label="Perguntas frequentes">
-        <div class="container faq-layout" data-reveal-group>
-          <div class="faq-sticky reveal-item">
-            <span class="section-kicker">§ 06 — Dúvidas Frequentes</span>
-            <h2 class="section-title">
-              Perguntas <em>frequentes</em>
-            </h2>
-            <p class="section-lead" style="margin-bottom: 1.75rem;">
-              Esclarecimentos objetivos sobre agendamento, atendimento remoto, documentos e acompanhamento dos casos.
-            </p>
-            <a
-              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20esclarecer%20uma%20d%C3%BAvida%20espec%C3%ADfica."
-              class="btn btn-outline"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div class="carousel-shell grid-desktop-3" data-carousel>
+            <div
+              class="carousel-track"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Artigos e orientações jurídicas"
+              tabindex="0"
             >
-              <span>Enviar dúvida específica</span>
-              <span class="btn-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="faq-list reveal-item" role="region" aria-label="Lista de perguntas frequentes">
-            <!-- FAQ 1 -->
-            <div class="faq-item">
-              <button
-                type="button"
-                class="faq-trigger"
-                aria-expanded="false"
-                aria-controls="faq-ans-1"
-                id="faq-btn-1"
-              >
-                <span>Como posso agendar uma consulta inicial com o escritório?</span>
-                <span class="faq-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
+              <button type="button" class="carousel-card carousel-card-btn" data-orient-id="laboral">
+                <span class="card-num">Relações de Trabalho</span>
+                <h3 class="card-title">A Importância da Documentação Laboral</h3>
+                <p class="card-desc">Como recibos, controles de jornada e termos de rescisão organizados previnem divergências em vínculos de trabalho.</p>
+                <span class="card-hint">Ler orientação completa</span>
               </button>
-              <div id="faq-ans-1" class="faq-content" role="region" aria-labelledby="faq-btn-1">
-                <div class="faq-content-inner">
-                  <p>
-                    O agendamento pode ser realizado pelo nosso WhatsApp institucional ou telefone. Nossa recepção coletará as informações básicas da sua demanda e proporá horários disponíveis com o advogado especialista na respectiva área.
-                  </p>
-                </div>
-              </div>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-orient-id="inventario">
+                <span class="card-num">Família &amp; Patrimônio</span>
+                <h3 class="card-title">Inventário: Vantagens da Via Extrajudicial</h3>
+                <p class="card-desc">Requisitos legais e documentos iniciais para formalizar a partilha de bens por escritura pública em cartório.</p>
+                <span class="card-hint">Ler orientação completa</span>
+              </button>
+
+              <button type="button" class="carousel-card carousel-card-btn" data-orient-id="contratos">
+                <span class="card-num">Negócios &amp; Contratos</span>
+                <h3 class="card-title">Cláusulas Essenciais em Contratos Comerciais</h3>
+                <p class="card-desc">Pontos que garantem equilíbrio contratual, prazos claros e segurança jurídica antes da assinatura.</p>
+                <span class="card-hint">Ler orientação completa</span>
+              </button>
             </div>
 
-            <!-- FAQ 2 -->
-            <div class="faq-item">
-              <button
-                type="button"
-                class="faq-trigger"
-                aria-expanded="false"
-                aria-controls="faq-ans-2"
-                id="faq-btn-2"
-              >
-                <span>O atendimento pode ser realizado de forma remota/online?</span>
-                <span class="faq-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="faq-ans-2" class="faq-content" role="region" aria-labelledby="faq-btn-2">
-                <div class="faq-content-inner">
-                  <p>
-                    Sim. Atendemos clientes presencialmente em nossa sede no Centro de Campinas e também por videoconferência segura. Todas as etapas, como envio de documentos, reuniões de alinhamento e assinaturas digitais, contam com validade jurídica e sigilo garantido.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item">
-              <button
-                type="button"
-                class="faq-trigger"
-                aria-expanded="false"
-                aria-controls="faq-ans-3"
-                id="faq-btn-3"
-              >
-                <span>Quais documentos devo separar para o primeiro atendimento?</span>
-                <span class="faq-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="faq-ans-3" class="faq-content" role="region" aria-labelledby="faq-btn-3">
-                <div class="faq-content-inner">
-                  <p>
-                    Recomendamos separar documento de identificação pessoal (RG/CPF ou CNH), comprovante de endereço recente e os documentos específicos pertinentes ao caso (por exemplo, CTPS e holerites no trabalhista; contratos no cível; certidões de óbito e casamento no inventário).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item">
-              <button
-                type="button"
-                class="faq-trigger"
-                aria-expanded="false"
-                aria-controls="faq-ans-4"
-                id="faq-btn-4"
-              >
-                <span>Como o escritório mantém o cliente informado sobre o andamento do caso?</span>
-                <span class="faq-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="faq-ans-4" class="faq-content" role="region" aria-labelledby="faq-btn-4">
-                <div class="faq-content-inner">
-                  <p>
-                    Mantemos uma rotina proativa de comunicação. Sempre que houver despachos, audiências ou decisões relevantes, o cliente recebe um resumo explicativo em linguagem clara, além de poder agendar contatos durante o expediente comercial para tirar dúvidas.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="faq-item">
-              <button
-                type="button"
-                class="faq-trigger"
-                aria-expanded="false"
-                aria-controls="faq-ans-5"
-                id="faq-btn-5"
-              >
-                <span>O escritório prioriza a conciliação antes do litígio judicial?</span>
-                <span class="faq-plus" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </span>
-              </button>
-              <div id="faq-ans-5" class="faq-content" role="region" aria-labelledby="faq-btn-5">
-                <div class="faq-content-inner">
-                  <p>
-                    Sempre que cabível e do interesse do cliente, avaliamos e incentivamos a resolução consensual, mediação e acordos extrajudiciais. Esse caminho costuma ser mais ágil, previsível e menos oneroso para as partes.
-                  </p>
-                </div>
-              </div>
+            <div class="carousel-controls">
+              <div class="carousel-dots" role="tablist" aria-label="Selecionar orientação"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <hr class="section-rule" />
-
-      <!-- 8. AMBIENTE — GALERIA 6 FOTOS -->
-      <section id="ambiente" class="section section--ivory" aria-label="Ambiente do escritório">
-        <div class="container" data-reveal-group>
-          <div class="gallery-head">
-            <span class="section-kicker reveal-item">§ 07 — Estrutura Física</span>
-            <h2 class="section-title reveal-item">
-              Ambiente planejado para conforto e <em>sigilo</em>
-            </h2>
-            <p class="section-lead reveal-item">
-              Instalações concebidas para receber clientes com discrição e isolamento acústico na Rua Barreto Leme, no Centro de Campinas.
-            </p>
-          </div>
-
-          <div id="galleryStage" class="gallery-stage img-curtain reveal-item">
-            <div id="galleryTrack" class="gallery-track">
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/recepcao-Bp7okd4u.jpg"
-                  alt="Recepção do escritório Silva e Costa Advogados em Campinas"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/biblioteca-6tsc9TOA.jpg"
-                  alt="Biblioteca jurídica com estantes em madeira e poltrona de leitura"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/reuniao-bCsjoEaM.jpg"
-                  alt="Sala de reuniões privativa com mesa ampla para atendimento a clientes"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/sala-socio-B5Dl42mP.jpg"
-                  alt="Sala do sócio para atendimento reservado e análise de documentos"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/corredor-C1fMP0Lg.jpg"
-                  alt="Corredor privativo ligando as salas de atendimento do escritório"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
-              <div class="gallery-slide">
-                <img
-                  src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/detalhes-B8pZq01E.jpg"
-                  alt="Detalhes da mesa de trabalho com documentos e instrumentos de escrita"
-                  width="1600"
-                  height="1000"
-                  loading="lazy"
-                  referrerpolicy="no-referrer"
-                />
-              </div>
+      <!-- 7. PERGUNTAS FREQUENTES (ACORDEÃO CSS PURO) -->
+      <section id="faq" class="section section--paper">
+        <div class="container">
+          <div class="faq-layout">
+            <div class="faq-sticky reveal-block">
+              <span class="section-kicker">Perguntas Frequentes</span>
+              <h2 class="section-title">Dúvidas comuns antes da primeira consulta.</h2>
+              <p class="section-lead">Respostas objetivas sobre formato de atendimento, documentos iniciais e contratação.</p>
             </div>
-          </div>
 
-          <div class="gallery-footer reveal-item">
-            <div>
-              <h3 id="galleryCaptionTitle" class="gallery-caption-title">Recepção</h3>
-              <p id="galleryCaptionDesc" class="gallery-caption-desc">
-                Ambiente de chegada planejado para acolher clientes com discrição e conforto no Centro de Campinas.
-              </p>
-            </div>
-            <div class="gallery-controls">
-              <button type="button" id="galleryPrev" class="gallery-arrow-btn" aria-label="Foto anterior do ambiente">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <span id="galleryCounter" class="gallery-counter" aria-live="polite">01 / 06</span>
-              <button type="button" id="galleryNext" class="gallery-arrow-btn" aria-label="Próxima foto do ambiente">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
+            <div class="faq-list">
+              <article class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span>Como funciona o primeiro atendimento?</span>
+                  <span class="faq-plus" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    <p>Na primeira conversa, ouvimos seu relato, verificamos os documentos essenciais e explicamos os caminhos jurídicos aplicáveis, prazos e eventual necessidade de medidas complementares.</p>
+                  </div>
+                </div>
+              </article>
 
-          <div class="gallery-thumbs reveal-item" aria-label="Miniaturas das fotos do escritório">
-            <button type="button" class="gallery-thumb is-active" aria-label="Ver foto Recepção" aria-current="true">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/recepcao-Bp7okd4u.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
-            <button type="button" class="gallery-thumb" aria-label="Ver foto Biblioteca e Acervo Jurídico" aria-current="false">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/biblioteca-6tsc9TOA.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
-            <button type="button" class="gallery-thumb" aria-label="Ver foto Sala de Reuniões" aria-current="false">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/reuniao-bCsjoEaM.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
-            <button type="button" class="gallery-thumb" aria-label="Ver foto Sala do Sócio" aria-current="false">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/sala-socio-B5Dl42mP.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
-            <button type="button" class="gallery-thumb" aria-label="Ver foto Corredor" aria-current="false">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/corredor-C1fMP0Lg.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
-            <button type="button" class="gallery-thumb" aria-label="Ver foto Detalhes do Escritório" aria-current="false">
-              <img src="https://silva-costa-advogados.orizonstudio-ltda.workers.dev/assets/detalhes-B8pZq01E.jpg" alt="" width="320" height="200" loading="lazy" referrerpolicy="no-referrer" />
-            </button>
+              <article class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span>O escritório atende apenas em Campinas?</span>
+                  <span class="faq-plus" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    <p>Nossa sede física fica no Centro de Campinas - SP, atendendo toda a Região Metropolitana presencialmente e clientes de outras cidades por videoconferência e processos eletrônicos.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span>Quais documentos devo separar antes da consulta?</span>
+                  <span class="faq-plus" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    <p>Reúna contratos, comprovantes, comunicações escritas, notificações ou documentos pessoais ligados à questão. Caso algo ainda esteja pendente, indicamos durante o atendimento como obtê-lo.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span>Como são definidos os honorários advocatícios?</span>
+                  <span class="faq-plus" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    <p>Os honorários são formalizados por contrato escrito após a avaliação inicial, considerando a complexidade da demanda e os parâmetros da Tabela da OAB/SP, sempre de modo claro antes de qualquer contratação.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span>Os atendimentos podem ser realizados online?</span>
+                  <span class="faq-plus" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    <p>Sim. Realizamos reuniões por chamada de vídeo em horário agendado, com envio digital seguro de documentos e assinatura eletrônica quando aplicável.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <hr class="section-rule" />
+      <!-- 8. AMBIENTE (CARROSSEL COM FOTOS LOCAIS + LEGENDA VIVA) -->
+      <section id="ambiente" class="section section--ivory">
+        <div class="container">
+          <div class="carousel-header reveal-block">
+            <span class="section-kicker">Ambiente</span>
+            <h2 class="section-title">Estrutura reservada no Centro de Campinas.</h2>
+            <p class="section-lead">Salas preparadas para reuniões presenciais com discrição, conforto e acesso facilitado.</p>
+          </div>
 
-      <!-- 9. CONTATO E LOCALIZAÇÃO -->
-      <section id="contato" class="section section--paper" aria-label="Contato e localização">
-        <div class="container" data-reveal-group>
-          <span class="section-kicker reveal-item">§ 08 — Contato &amp; Localização</span>
-          <h2 class="section-title reveal-item">
-            Entre em contato com nossa <em>equipe</em>
-          </h2>
-          <p class="section-lead reveal-item">
-            Preencha o formulário para abrir o atendimento direto pelo WhatsApp ou consulte os horários para atendimento presencial em Campinas.
-          </p>
+          <div class="carousel-shell ambiente-carousel grid-desktop-ambiente" data-carousel>
+            <div
+              class="carousel-track"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Fotos do ambiente do escritório"
+              tabindex="0"
+            >
+              <article
+                class="carousel-card"
+                data-caption-title="Recepção"
+                data-caption-desc="Espaço reservado para acolhimento inicial, com atendimento pontual e privativo no Centro de Campinas."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/recepcao-mobile.jpg" />
+                    <img
+                      src="images/recepcao.jpg"
+                      width="1376"
+                      height="768"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Recepção do escritório Silva & Costa Advogados em Campinas"
+                    />
+                  </picture>
+                  <span class="media-fallback">Recepção · Silva &amp; Costa</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Recepção</h3>
+                  <p>Acolhimento inicial com atendimento pontual e privativo no Centro de Campinas.</p>
+                </div>
+              </article>
+
+              <article
+                class="carousel-card"
+                data-caption-title="Acervo e Pesquisa"
+                data-caption-desc="Biblioteca jurídica dedicada ao estudo de legislação, doutrina e precedentes atualizados."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/biblioteca-mobile.jpg" />
+                    <img
+                      src="images/biblioteca.jpg"
+                      width="1200"
+                      height="896"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Estantes com acervo de livros jurídicos no escritório"
+                    />
+                  </picture>
+                  <span class="media-fallback">Acervo Jurídico</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Acervo e Pesquisa</h3>
+                  <p>Biblioteca jurídica dedicada ao estudo de legislação, doutrina e precedentes.</p>
+                </div>
+              </article>
+
+              <article
+                class="carousel-card"
+                data-caption-title="Sala de Reuniões"
+                data-caption-desc="Ambiente estruturado para alinhamentos estratégicos presenciais, mediações e videoconferências."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/reuniao-mobile.jpg" />
+                    <img
+                      src="images/reuniao.jpg"
+                      width="1200"
+                      height="896"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Sala de reuniões com mesa ampla e iluminação natural"
+                    />
+                  </picture>
+                  <span class="media-fallback">Sala de Reuniões</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Sala de Reuniões</h3>
+                  <p>Ambiente para alinhamentos presenciais, mediações e videoconferências.</p>
+                </div>
+              </article>
+
+              <article
+                class="carousel-card"
+                data-caption-title="Consultório Jurídico"
+                data-caption-desc="Atendimento individualizado com sigilo profissional e análise cuidadosa da documentação."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/sala-socio-mobile.jpg" />
+                    <img
+                      src="images/sala-socio.jpg"
+                      width="1200"
+                      height="896"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Sala privativa de atendimento jurídico"
+                    />
+                  </picture>
+                  <span class="media-fallback">Consultório Jurídico</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Consultório Jurídico</h3>
+                  <p>Atendimento individualizado com sigilo profissional e exame documental.</p>
+                </div>
+              </article>
+
+              <article
+                class="carousel-card"
+                data-caption-title="Circulação Interna"
+                data-caption-desc="Organização funcional entre as salas de atendimento, pesquisa documental e apoio administrativo."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/corredor-mobile.jpg" />
+                    <img
+                      src="images/corredor.jpg"
+                      width="1200"
+                      height="896"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Corredor interno com acabamento em madeira e iluminação suave"
+                    />
+                  </picture>
+                  <span class="media-fallback">Circulação Interna</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Circulação Interna</h3>
+                  <p>Integração funcional entre salas de atendimento e apoio técnico.</p>
+                </div>
+              </article>
+
+              <article
+                class="carousel-card"
+                data-caption-title="Organização Documental"
+                data-caption-desc="Cuidado contínuo com prazos processuais, contratos e registros em cada demanda acompanhada."
+              >
+                <div class="media-slot">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="images/detalhes-mobile.jpg" />
+                    <img
+                      src="images/detalhes.jpg"
+                      width="1200"
+                      height="896"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Detalhes de estação de trabalho jurídica organizada"
+                    />
+                  </picture>
+                  <span class="media-fallback">Organização Documental</span>
+                </div>
+                <div class="ambiente-card-caption">
+                  <h3>Organização Documental</h3>
+                  <p>Cuidado contínuo com prazos processuais, contratos e registros.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="ambiente-caption" aria-live="polite">
+              <h3 id="ambienteLiveTitle" class="ambiente-caption-title" data-live-title>Recepção</h3>
+              <p id="ambienteLiveDesc" class="ambiente-caption-desc" data-live-desc>Espaço reservado para acolhimento inicial, com atendimento pontual e privativo no Centro de Campinas.</p>
+            </div>
+
+            <div class="carousel-controls">
+              <div class="carousel-dots" role="tablist" aria-label="Selecionar foto do ambiente"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. CONTATO + CANAIS DIRETOS + MAPA DO GOOGLE MAPS INTEGRADO -->
+      <section id="contato" class="section section--paper">
+        <div class="container">
+          <div class="reveal-block">
+            <span class="section-kicker">Contato &amp; Localização</span>
+            <h2 class="section-title">Fale conosco ou venha até o escritório.</h2>
+            <p class="section-lead">Atendimento presencial no Centro de Campinas ou online por videoconferência. Escolha o canal de sua preferência ou consulte ruas e referências no mapa.</p>
+          </div>
 
           <div class="contact-grid">
-            <div class="reveal-item">
-              <div class="info-blocks">
+            <div>
+              <div class="info-list">
                 <div class="info-row">
                   <span class="info-label">Endereço</span>
-                  <span class="info-value">Rua Barreto Leme, 100, sala 305, Centro, Campinas - SP, CEP 13010-200</span>
+                  <div class="info-value">
+                    Rua Barreto Leme, 100, sala 305<br />
+                    Centro, Campinas - SP · CEP 13010-200
+                    <span class="info-note">Região central, próximo ao Mercado Municipal e à Av. Benjamin Constant. Estacionamento conveniado na via paralela.</span>
+                  </div>
                 </div>
+
                 <div class="info-row">
                   <span class="info-label">Horários</span>
-                  <span class="info-value">Segunda a Sexta-feira, das 09h às 18h (exceto feriados)</span>
+                  <div class="info-value">
+                    <ul id="hoursList" class="hours-list" aria-label="Horários de atendimento">
+                      <li class="hours-row" data-weekday="1"><span>Segunda-feira<span class="hours-today-tag"></span></span><span>09:00 – 18:00</span></li>
+                      <li class="hours-row" data-weekday="2"><span>Terça-feira<span class="hours-today-tag"></span></span><span>09:00 – 18:00</span></li>
+                      <li class="hours-row" data-weekday="3"><span>Quarta-feira<span class="hours-today-tag"></span></span><span>09:00 – 18:00</span></li>
+                      <li class="hours-row" data-weekday="4"><span>Quinta-feira<span class="hours-today-tag"></span></span><span>09:00 – 18:00</span></li>
+                      <li class="hours-row" data-weekday="5"><span>Sexta-feira<span class="hours-today-tag"></span></span><span>09:00 – 18:00</span></li>
+                      <li class="hours-row" data-weekday="0,6"><span>Sábado e Domingo<span class="hours-today-tag"></span></span><span>Fechado</span></li>
+                    </ul>
+                  </div>
                 </div>
+
                 <div class="info-row">
                   <span class="info-label">WhatsApp</span>
-                  <span class="info-value">
+                  <div class="info-value">
                     <a
-                      href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
+                      href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20Silva%20%26%20Costa%20Advogados."
+                      class="link-arrow"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       (11) 99999-8888
                     </a>
-                  </span>
+                  </div>
                 </div>
+
                 <div class="info-row">
                   <span class="info-label">Instagram</span>
-                  <span class="info-value">
-                    <a href="https://instagram.com/silvacostaadv" target="_blank" rel="noopener noreferrer">
-                      @silvacostaadv
-                    </a>
-                  </span>
+                  <div class="info-value">
+                    <a href="https://instagram.com/silvacostaadv" class="link-arrow" target="_blank" rel="noopener noreferrer">@silvacostaadv</a>
+                  </div>
                 </div>
               </div>
 
-              <div class="map-frame">
+              <div class="contact-channels">
+                <a
+                  href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20Silva%20%26%20Costa%20Advogados."
+                  class="btn btn-primary btn-block contact-channel-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Falar no WhatsApp
+                </a>
+                <a
+                  href="https://instagram.com/silvacostaadv"
+                  class="btn btn-outline btn-block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Conheça nosso Instagram
+                </a>
+                <a href="tel:+5511999998888" class="btn btn-outline btn-block">
+                  Ligar (11) 99999-8888
+                </a>
+              </div>
+
+              <p class="secrecy-note">
+                <strong>Sigilo Profissional:</strong> as informações compartilhadas são estritamente confidenciais e protegidas pelo sigilo inerente à atividade da advocacia.
+              </p>
+            </div>
+
+            <div class="map-panel">
+              <div class="map-embed-wrap">
                 <iframe
-                  title="Mapa de localização do escritório Silva e Costa Advogados em Campinas"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.295213606775!2d-47.06173002381285!3d-22.90248467925828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8ad3bb8d2b7%3A0xb2bb352f2070fc19!2sR.%20Barreto%20Leme%2C%20100%20-%20Centro%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                  id="googleMapIframe"
+                  title="Mapa do Google Maps mostrando Rua Barreto Leme, 100 e arredores no Centro de Campinas"
+                  src="https://maps.google.com/maps?q=Rua+Barreto+Leme,+100,+Centro,+Campinas+-+SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   allowfullscreen
                 ></iframe>
               </div>
-            </div>
-
-            <div class="form-panel reveal-item">
-              <h3 class="form-panel-title">Envie sua mensagem</h3>
-              <p class="form-panel-intro">
-                Ao enviar, o WhatsApp será aberto com os seus dados já preenchidos para agilizar o início do atendimento.
-              </p>
-
-              <form id="contactForm" novalidate>
-                <div class="field-float">
-                  <input
-                    type="text"
-                    id="formNome"
-                    name="nome"
-                    class="field-input"
-                    placeholder=" "
-                    autocomplete="name"
-                    required
-                  />
-                  <label for="formNome" class="field-label">Nome completo *</label>
-                  <div id="erroNome" class="field-error" role="alert">Por favor, informe seu nome completo.</div>
-                </div>
-
-                <div class="field-float">
-                  <input
-                    type="tel"
-                    id="formTelefone"
-                    name="telefone"
-                    class="field-input"
-                    placeholder=" "
-                    autocomplete="tel"
-                    required
-                  />
-                  <label for="formTelefone" class="field-label">Telefone / WhatsApp com DDD *</label>
-                  <div id="erroTelefone" class="field-error" role="alert">Por favor, informe um telefone válido com DDD.</div>
-                </div>
-
-                <div class="field-float">
-                  <select id="formArea" name="area" class="field-select">
-                    <option value="Direito Trabalhista">Direito Trabalhista</option>
-                    <option value="Direito de Família e Sucessões">Direito de Família e Sucessões</option>
-                    <option value="Direito Previdenciário">Direito Previdenciário</option>
-                    <option value="Direito Cível e Contratual">Direito Cível e Contratual</option>
-                    <option value="Direito Empresarial">Direito Empresarial</option>
-                    <option value="Outro Assunto">Outro Assunto / Consulta Geral</option>
-                  </select>
-                  <label for="formArea" class="field-label">Área de interesse</label>
-                </div>
-
-                <div class="field-float">
-                  <textarea
-                    id="formMensagem"
-                    name="mensagem"
-                    rows="4"
-                    class="field-textarea"
-                    placeholder=" "
-                  ></textarea>
-                  <label for="formMensagem" class="field-label">Breve relato da situação</label>
-                </div>
-
-                <div class="secrecy-note">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg>
-                  <span>
-                    <strong>Sigilo profissional:</strong> as informações compartilhadas são confidenciais e resguardadas pelo dever de sigilo inerente à advocacia.
-                  </span>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                  Enviar mensagem via WhatsApp
-                </button>
-              </form>
+              <div class="map-panel-footer">
+                <span class="map-panel-address">Rua Barreto Leme, 100, sala 305 · Centro, Campinas - SP</span>
+                <a
+                  href="https://maps.google.com/?q=Rua+Barreto+Leme,+100,+Centro,+Campinas+-+SP"
+                  class="link-arrow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Traçar rota no Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- RODAPÉ -->
-    <footer class="site-footer" role="contentinfo">
+    <!-- 10. RODAPÉ -->
+    <footer id="siteFooter" class="site-footer">
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-              <span class="brand-monogram" style="border-color: var(--bronze); color: var(--bg-ivory);" aria-hidden="true">SC</span>
-              <span class="brand-name" style="color: var(--bg-ivory);">Silva &amp; Costa Advogados</span>
-            </div>
-            <p style="font-size: 0.9rem; color: rgba(243, 238, 228, 0.8); line-height: 1.65; margin-bottom: 1rem; max-width: 34ch;">
-              Sociedade de advogados dedicada ao atendimento consultivo e contencioso em Campinas e região, sob as normas do Código de Ética e Disciplina da OAB.
-            </p>
-            <p style="font-size: 0.875rem; color: var(--bronze);">
-              Instagram:
-              <a href="https://instagram.com/silvacostaadv" target="_blank" rel="noopener noreferrer" style="color: var(--bg-ivory); text-decoration: underline;">
-                @silvacostaadv
-              </a>
-            </p>
+            <p class="footer-heading">Silva &amp; Costa Advogados</p>
+            <p>Sociedade de advogados com atuação consultiva e contenciosa em Campinas - SP, pautada pela técnica jurídica e discrição profissional.</p>
           </div>
 
           <div>
-            <h4 class="footer-heading">Navegação</h4>
+            <p class="footer-heading">Navegação</p>
             <ul class="footer-list">
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#sobre">Sobre o Escritório</a></li>
+              <li><a href="#sobre">Sobre</a></li>
               <li><a href="#atuacao">Áreas de Atuação</a></li>
-              <li><a href="#equipe">Corpo Jurídico</a></li>
+              <li><a href="#equipe">Equipe</a></li>
               <li><a href="#atendimento">Como Funciona</a></li>
-              <li><a href="#orientacoes">Orientações Gerais</a></li>
+              <li><a href="#orientacoes">Orientações</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-heading">Informações</p>
+            <ul class="footer-list">
               <li><a href="#faq">Perguntas Frequentes</a></li>
               <li><a href="#ambiente">Ambiente</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li><a href="#contato">Localização e Contato</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-heading">Áreas de Atuação</h4>
+            <p class="footer-heading">Contato Direto</p>
             <ul class="footer-list">
-              <li><a href="#atuacao">Direito Trabalhista</a></li>
-              <li><a href="#atuacao">Direito de Família e Sucessões</a></li>
-              <li><a href="#atuacao">Direito Previdenciário</a></li>
-              <li><a href="#atuacao">Direito Cível e Contratos</a></li>
-              <li><a href="#atuacao">Direito Empresarial</a></li>
+              <li>Rua Barreto Leme, 100, sala 305 · Campinas - SP</li>
+              <li><a href="tel:+5511999998888">(11) 99999-8888</a></li>
+              <li><a href="https://instagram.com/silvacostaadv" target="_blank" rel="noopener noreferrer">@silvacostaadv</a></li>
             </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-heading">Atendimento Presencial</h4>
-            <p style="font-size: 0.9rem; color: rgba(243, 238, 228, 0.82); line-height: 1.65; margin-bottom: 1.15rem;">
-              Rua Barreto Leme, 100, sala 305<br />
-              Centro, Campinas - SP<br />
-              CEP 13010-200<br />
-              Seg a Sex, 9h às 18h
-            </p>
-            <a
-              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-              class="btn btn-ivory-outline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp: (11) 99999-8888
-            </a>
           </div>
         </div>
 
         <div class="footer-legal">
           <p>
-            <strong>Aviso Legal e Ético:</strong> Este site tem caráter exclusivamente informativo e institucional, não constituindo aconselhamento jurídico nem estabelecendo relação advogado-cliente pelo simples acesso ou envio de mensagem. Para análise formal de caso concreto, é indispensável consulta com profissional regularmente inscrito.
+            Aviso Legal: este conteúdo possui caráter exclusivamente informativo, não configurando consulta jurídica nem promessa de resultado. Cada situação demanda exame técnico específico dos fatos e documentos aplicáveis.
           </p>
           <p class="footer-legal-oab">
-            Em conformidade com o Provimento nº 205/2021 e com o Código de Ética e Disciplina da OAB.
+            Conteúdo elaborado em observância ao Código de Ética e Disciplina da OAB e ao Provimento nº 205/2021 do Conselho Federal da OAB.
           </p>
         </div>
 
         <div class="footer-meta">
-          <span>&copy; 2026 Silva &amp; Costa Advogados. Todos os direitos reservados.</span>
+          <span>© 2025 Silva &amp; Costa Advogados · Campinas - SP</span>
           <span>Site demonstrativo. Dados e imagens fictícios.</span>
         </div>
-
-        <div class="footer-wordmark" aria-hidden="true">Silva &amp; Costa</div>
       </div>
     </footer>
 
-    <!-- Modal / Leitor Editorial para Orientações Gerais -->
-    <div
-      id="articleModal"
-      class="article-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="articleModalTitle"
-      aria-hidden="true"
-    >
-      <div class="article-modal-dialog">
-        <div class="article-modal-head">
-          <div>
-            <span id="articleModalCategory" class="article-category" style="display: block; margin-bottom: 0.35rem;">Categoria</span>
-            <h3 id="articleModalTitle" class="article-title" style="margin-bottom: 0;">Título da orientação</h3>
-          </div>
-          <button type="button" id="articleModalClose" class="article-modal-close" aria-label="Fechar leitura">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-        <div id="articleModalBody" class="article-modal-body"></div>
-        <a
-          id="articleModalWa"
-          href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20as%20orienta%C3%A7%C3%B5es."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tirar dúvidas sobre este tema no WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Botão Flutuante WhatsApp (Desktop) -->
+    <!-- 11. BOTÃO FLUTUANTE FIXO DE WHATSAPP (DESKTOP + MOBILE) -->
     <a
-      href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-      class="wa-fab"
+      id="whatsappFab"
+      class="whatsapp-fab"
+      href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20equipe%20da%20Silva%20%26%20Costa%20Advogados."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Conversar no WhatsApp"
-      title="Conversar no WhatsApp"
+      aria-label="Falar com a advocacia pelo WhatsApp"
+      title="Falar pelo WhatsApp"
     >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.2.301-.778.98-.953 1.18-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.896-.799-1.501-1.786-1.677-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.241-.244-.591-.493-.51-.678-.519-.176-.009-.377-.009-.578-.009-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.511s1.079 2.912 1.23 3.113c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.032-1.43.251-.703.251-1.305.176-1.43-.076-.126-.277-.201-.578-.352z" />
-        <path d="M12.04 2c-5.464 0-9.91 4.446-9.91 9.91 0 1.751.459 3.46 1.332 4.975l-1.417 5.178 5.305-1.391c1.458.795 3.103 1.214 4.69 1.214 5.464 0 9.91-4.446 9.91-9.91 0-2.646-1.03-5.134-2.903-7.007-1.874-1.873-4.362-2.903-7.007-2.903zm0 18.064c-1.492 0-2.955-.401-4.232-1.16l-.304-.18-3.146.825.84-3.067-.198-.315c-.833-1.326-1.273-2.868-1.273-4.457 0-4.502 3.662-8.164 8.164-8.164 2.181 0 4.231.849 5.773 2.391 1.542 1.542 2.391 3.592 2.391 5.773 0 4.502-3.662 8.164-8.164 8.164z" />
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.95 1.38-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.38.79-.38h.57c.18 0 .43-.07.67.51.24.59.82 2.02.89 2.17.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.34.07.12.07.7-.17 1.38z" />
       </svg>
     </a>
 
-    <!-- Barra Fixa Inferior (Mobile; oculta quando o formulário está visível) -->
-    <div id="mobileStickyBar" class="mobile-sticky-bar" aria-label="Atalhos rápidos de contato">
+    <!-- GAVETA INFERIOR (<dialog>) PARA ÁREAS E ORIENTAÇÕES -->
+    <dialog id="detailSheet" class="sheet-dialog" aria-labelledby="sheetTitle">
+      <div class="sheet-head">
+        <div>
+          <span id="sheetKicker" class="section-kicker"></span>
+          <h3 id="sheetTitle" class="card-title"></h3>
+        </div>
+        <button id="sheetClose" class="sheet-close" type="button" aria-label="Fechar detalhes">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <line x1="5" y1="5" x2="19" y2="19" />
+            <line x1="19" y1="5" x2="5" y2="19" />
+          </svg>
+        </button>
+      </div>
+      <div id="sheetBody" class="sheet-body"></div>
+      <ul id="sheetServices" class="sheet-services"></ul>
       <a
-        href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
-        class="mobile-sticky-action"
+        id="sheetWaBtn"
+        href="https://wa.me/5511999998888"
+        class="btn btn-primary btn-block"
         target="_blank"
         rel="noopener noreferrer"
       >
-        WhatsApp
+        Falar sobre este assunto
       </a>
-      <a href="#contato" class="mobile-sticky-action">
-        Agendar consulta
-      </a>
-    </div>
+    </dialog>
 
-    <!-- Lenis + GSAP + Script Principal -->
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
